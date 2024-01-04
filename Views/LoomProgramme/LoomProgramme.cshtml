@@ -1,0 +1,112 @@
+﻿
+@{
+    Layout = "~/Views/Shared/AllProgramesHeaderFooter.cshtml";
+}
+
+
+<!-- <h2 style="margin-top: 20px;color:#145566; font-weight: bold; margin-left: 20px;">LOOM PLANNING REPORT</h2> -->
+<h5 class="panel-title" style="color:#FFFFFF; background-color:#46b9e0; width:100%; font-size:14px;  padding: 6px; margin-top:2px;" align="center"> &nbsp; LOOM PROGRAMME</h5>
+
+<div class="row">
+
+    <div class="col-md-12" style="margin-top: 2vh;">
+
+
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Loom Number<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="LoomNumber" placeholder="" />
+        </div>
+
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Job Code<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="JobCode" placeholder=""  />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Size<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="Size" placeholder=""  />
+        </div>
+
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Denier<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="Denier" placeholder=""  />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Mesh<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="Mesh" placeholder=""  />
+        </div>
+
+        <div class="col-md-2" style="margin-top: 5px;">
+            <label class="control-label">COLOUR MARKING<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="ColorMarking" placeholder=""  />
+        </div>
+
+        <div class="col-md-2" style="margin-top:20px;">
+            <button id="on" type="button" class="btn mjks" style="color:#FFFFFF; height:30px;width: 99px; margin-top:7px;"><i class="fa fa-floppy-o" aria-hidden="true"></i>SUBMIT</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<div class="row">
+
+    <div class="col-md-12" style="margin-top:15px;">
+
+        <!-- START DEFAULT DATATABLE  -->
+
+        <div class="panel-body" style="margin-top:5px; margin-bottom:15px;">
+            <div style="overflow-x: auto;">
+
+                <table class="table datatable">
+                    <thead>
+
+                        <tr>
+                            <th>Sr No</th>
+                            <th>Loom No</th>
+                            <th>Job Code</th>
+                            <th>Size</th>
+                            <th>Denier</th>
+                            <th>Mesh</th>
+                            <th>Color making</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Sharique Sheikh</td>
+                            <td>SBI</td>
+                            <td>12546789075</td>
+                            <td>SBI000Hj767</td>
+                            <td>Yellow</td>
+                            <td>
+                                <button style="background-color:#3399ff; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit" style="margin-left:5px;"></i></button>
+                                <button style="background-color:#ff0000; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o" style="margin-left:5px;"></i></button>
+
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- END DEFAULT DATATABLE  -->
+    </div>
+
+</div>
+
+
+
+
+

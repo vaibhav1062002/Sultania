@@ -1,0 +1,633 @@
+﻿
+@{
+    Layout = "~/Views/Shared/DashboardComan.cshtml";
+}
+
+@model SultaniaOil.ViewModels.PartyGradeProductViewModel;
+
+
+
+<style>
+
+    .error {
+        color: red;
+    }
+
+  
+
+    .custom-alert {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @@keyframes slideIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @@keyframes slideOut {
+        from {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        to {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+    }
+
+
+
+
+
+    /* Styles for the popup */
+    #popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+    /* Hide the table and calculation inputs initially */
+    #dataTableWrapper,
+    .form-group-total {
+        display: none;
+    }
+    <!-- DataTables Buttons CSS -->
+    .dataTables_wrapper .dataTables_length,
+    .dataTables_wrapper .dataTables_buttons {
+        margin-right: 20px;
+    }
+    /* Style the buttons with icons and colors */
+    .dt-buttons .btn {
+        background-color: #3498DB;
+        /* Button background color */
+        color: #fff;
+        /* Button text color */
+        border-color: #2980B9;
+        /* Button border color */
+    }
+
+        .dt-buttons .btn:hover {
+            background-color: #2980B9;
+            /* Hover background color */
+        }
+    <!-- Customize button styles -->
+    .dt-buttons button {
+        color: rgb(252, 250, 250);
+        font-weight: 500;
+    }
+
+    .dt-buttons button:hover {
+        color: black;
+    }
+
+    .dt-buttons button.buttons-copy {
+        background-color: #007BFF;
+    }
+
+    .dt-buttons button.buttons-csv {
+        background-color: #28A745;
+    }
+
+    .dt-buttons button.buttons-excel {
+        background-color: #FFC107;
+    }
+
+    .dt-buttons button.buttons-pdf {
+        background-color: #DC3545;
+    }
+
+    .dt-buttons button.buttons-print {
+        background-color: #6C757D;
+    }
+
+    .error-message {
+        color: red;
+    }
+
+</style>
+
+
+
+
+
+
+<!-- <h2 style="margin-top: 20px;color:#145566; font-weight: bold; margin-left: 20px;">BAG TO BAG FLEXO PRINTING PROGRAMME AND PRODUCTION  REPORT</h2> -->
+<h5 class="panel-title" style="color:#FFFFFF; background-color:#009991; width:100%; font-size:14px;  padding: 6px; margin-top:2px;" align="center"> &nbsp;Raw Materials Purchase </h5>
+
+<div class="col-md-3" style="margin-top:15px;">
+    @if (TempData["Purches"] != null)
+    {
+        <div class="custom-alert" id="customAlert">
+            Data Added Successfully..!
+        </div>
+    }
+</div>
+
+<div class="row">
+
+    <div class="col-md-12" style="margin-top: 2vh;">
+
+
+        <form id="myForm" action="/RawMaterials/InsertProduct" method="post" onsubmit="return validateFormFields()">
+
+            <div class="col-md-2" style="margin-top: 5px;">
+                <label class="control-label">Date<font color="#FF0000">*</font></label>
+                <input type="date" class="form-control" name="Date" id="date" placeholder="" />
+                <span class="dateError text-danger"></span>
+
+            </div>
+
+            <div class="col-md-2" style="margin-top:5px;">
+                <label>Select Party <font color="#FF0000">*</font></label>
+                <select name="PartyName" id="party" class="form-control select" data-live-search="true">
+                    <option value="" disabled selected>Nothing Selected</option>
+                    @foreach (var data in Model.VendorEntities)
+                    {
+                        <option value="@data.Name">@data.Name</option>
+                    }
+                </select>
+                <span class="partyError text-danger"></span>
+            </div>
+
+
+            <div class="col-md-2" style="margin-top:5px;">
+                <label>Select Product <font color="#FF0000">*</font></label>
+                <select name="ProductName" id="product" class="form-control select" data-live-search="true">
+                    <option value="" selected="selected" disabled>Nothing Selected</option>
+                    @foreach (var data in Model.ProductEntities)
+                    {
+                        <option value="@data.Product">@data.Product</option>
+                    }
+                </select>
+                <span class="productError text-danger"></span>
+            </div>
+
+            <div class="col-md-2" style="margin-top:5px;">
+                <label>Select Grade <font color="#FF0000">*</font></label>
+                <select name="GradeName" id="grade" class="form-control select" data-live-search="true">
+                    <option value="" selected="selected" disabled>Nothing Selected</option>
+                    @foreach (var data in Model.GradeEntitys)
+                    {
+                        <option value="@data.Grade">@data.Grade</option>
+                    }
+                </select>
+                <span  class="gradeError text-danger"></span>
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Quantity<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="Quantity" id="quantity" placeholder=""  />
+                <span class="quantityError text-danger"></span>
+            </div>
+
+            <div class="col-md-1" style="font-weight: bold; margin-top: 6px;">
+                <button id="on" type="submit" class="btn mjks"
+                        style="color:#FFFFFF;height:30px;margin-top: 17px;width: 99px;">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>SUBMIT
+                </button>
+            </div>
+
+        </form>
+
+
+    </div>
+
+</div>
+
+
+
+<hr style="border: 1px solid #000000bf;
+            opacity: 0.2;">
+
+
+<!-- Button to open the popup -->
+@* <div class="row">
+    <div class="col-md-12 text-right">
+        <!-- Align to the right -->
+        <button class="btn btn-primary" onclick="openPopup()" style="color:#FFFFFF; height:30px;width: max-content;">
+            <i class="fa fa-files-o" aria-hidden="true"></i>Filter Purchase
+        </button>
+    </div>
+</div> *@
+
+<div class="row">
+
+    <div class="col-md-12" style="margin-top:15px;">
+
+
+        <div class="panel-body" style="margin-top:5px; margin-bottom:15px;">
+            <div style="overflow-x: auto;">
+                <table class="table datatable">
+                    <thead>
+                        <tr>
+                            <th>Sr No</th>
+                            <th>Date</th>
+                            <th>Party Name</th>
+                            <th>Product Name</th>
+                            <th>Grade Name</th>
+                            <th>Quantity</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var counter = 1;
+                        }
+                        @foreach (var item in Model.RawMaterials)
+                        {
+                            <tr>
+                                <td>@counter</td>
+                                <td>@item.Date.ToShortDateString()</td>
+                                <td>@item.PartyName</td>
+                                <td>@item.ProductName</td>
+                                <td>@item.GradeName</td>
+                                <td>@item.Quantity</td>
+                                <td style="width: 7%">
+                                    <button style="background-color:#3399ff; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info edit-btn" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit" style="margin-left:5px;"></i></button>
+                                    <button style="background-color:#ff0000; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info delete-btn" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o" style="margin-left:5px;" onclick="Delete(@item.Id)" id="DeleteButton_@item.Id"></i></button>
+                                </td>
+                            </tr>
+
+
+                            counter++;
+
+                        }
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Popup window content -->
+<div id="popup" class="container" style="width:100% !important; height:100% !important;">
+    <button class="close" onclick="closePopup()">&times;</button>
+    <div class="row">
+        <div class="form-group col-md-2" style="margin-left:2px;">
+            <label for="fromDate">From Date:</label>
+            <input type="Date" class="form-control" id="fromDate">
+        </div>
+
+        <div class="form-group  col-md-2" style="margin-left:2px;">
+            <label for="ToDate">To Date:</label>
+            <input type="date" class="form-control" id="toDate">
+        </div>
+
+        <div class="form-group  col-md-2" style="margin-left:2px">
+            <label for="vendorName"> Party Name:</label>
+            <input type="text" class="form-control" id="vendorName">
+        </div>
+
+   
+
+
+       @*  <div class="col-md-1" style="display:none">
+            <button class="btn btn-success" onclick="applyDateRange()" style="margin-top: 18px;">Filter Reports</button>
+        </div> *@
+
+    </div>
+    
+    <div class="filtredTable">
+    <table id="dataTable" class="table table-bordered">
+        <thead>
+
+            <tr>
+                <th>Sr No</th>
+                <th>Date</th>
+                <th>Party Name</th>
+                <th>Product Name</th>
+                <th>Grade</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var counter2 = 1;
+            }
+            @foreach (var data in Model.RawMaterials)
+            {
+                <tr>
+                    <td>@counter2</td>
+                    <td>@data.Date.ToShortDateString()</td>
+                    <td>@data.PartyName</td>
+                    <td>@data.ProductName</td>
+                    <td>@data.GradeName</td>
+                    <td>@data.Quantity</td>
+                   
+                </tr>
+
+                counter2++;
+            }
+
+
+
+        </tbody>
+    </table>
+    </div>
+
+    <div class="col-md-12">
+        <button type="button" onclick="closePopup()" class="btn btn-danger" style="float: right;">Close</button>
+
+        <button type="button" onclick="printReciept()" class="btn btn-success" style="float: right;margin-right: 7px;">Print Report</button>
+
+    </div>
+</div>
+
+
+
+<script>
+
+    
+
+
+
+
+
+
+    var today = new Date().toISOString().split('T')[0];
+
+    // Set the value of the date input field
+    document.getElementById('date').value = today;
+
+
+    // Trigger animation on page load
+    window.onload = function () {
+        var alertElement = document.getElementById('customAlert');
+        alertElement.classList.add('show');
+
+       
+
+        // Hide the alert after a delay
+        setTimeout(function () {
+            alertElement.classList.remove('show');
+        }, 3000); // Adjust the delay (in milliseconds) as needed
+    };
+
+
+
+
+    //filtering  datatable
+
+    // Function to open the popup
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+    }
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+
+
+    // Function to apply date range
+    function applyDateRange() {
+
+        // Example date strings in "DD-MM-YYYY" format
+        var fromDate = document.getElementById("fromDate").value;
+        var toDate = document.getElementById("toDate").value;
+
+        // Function to convert "DD-MM-YYYY" to "DD/MM/YYYY" format
+        function convertToSlashFormat(inputDate) {
+            var parts = inputDate.split('-');
+            return parts[1] + '/' + parts[2] + '/' + parts[0];
+        }
+
+        // Convert fromDate to "DD/MM/YYYY" format
+        var fromDateFormatted = convertToSlashFormat(fromDate);
+
+        // Convert toDate to "DD/MM/YYYY" format
+        var toDateFormatted = convertToSlashFormat(toDate);
+
+
+        var vendorName = document.getElementById("vendorName").value;
+        // Destroy existing DataTable instance (if any)
+        var table = $('#dataTable').DataTable();
+        table.destroy();
+
+        // Hide all rows initially
+        var tableRows = document.querySelectorAll("#popup table tbody tr");
+
+
+        tableRows.forEach(function (row) {
+            row.style.display = "none";
+        });
+
+
+        // Show rows that fall within the selected date range and shift options
+        tableRows.forEach(function (row) {
+            var date = row.cells[1].textContent; 
+            var vendor = row.cells[2].textContent;
+
+            console.log(vendor);
+
+            if ((date >= fromDateFormatted && date <= toDateFormatted) && (vendor == vendorName)) {
+                row.style.display = "";
+            }
+        });
+
+        // Reinitialize DataTable
+        $('#dataTable').DataTable();
+
+        // Show the table and calculation inputs
+        document.getElementById("dataTableWrapper").style.display = "block";
+        document.querySelector(".form-group-total").style.display = "block";
+    }
+
+
+
+    // Function to calculate total production
+    function calculateTotalProduction() {
+        var totalDayProduction = 0;
+        var totalNightProduction = 0;
+        // Iterate through visible table rows
+        var visibleRows = document.querySelectorAll("#popup table tbody tr[style='']");
+        visibleRows.forEach(function (row) {
+            var shiftTime = row.cells[3].textContent; // Assuming the shift column is in the fourth cell
+            var production = parseInt(row.cells[4].textContent); // Assuming the production column is in the fifth cell
+            // Check shift time and add to the corresponding total
+            if (shiftTime.toLowerCase() === 'day') {
+                totalDayProduction += production;
+            } else if (shiftTime.toLowerCase() === 'night') {
+                totalNightProduction += production;
+            }
+        });
+        // Display the totals in the input fields
+        document.getElementById("totalDayCostInput").value = totalDayProduction;
+        document.getElementById("totalNightCostInput").value = totalNightProduction;
+    }
+
+
+
+
+    // print reciept******************************************************
+    function printReciept() {
+        var printWindow = window.open('', '_blank');
+
+        var table1 = $('.filtredTable').html();
+
+        console.log(table1);
+
+        printWindow.document.write('<div style="margin:120px;">');
+
+        // Add style for table border
+        printWindow.document.write('<style>');
+        printWindow.document.write('table { border-collapse: collapse; width: 100%; }');
+        printWindow.document.write('th, td { border: 1px solid #000; padding: 8px; text-align: left; }');
+        printWindow.document.write('</style>');
+
+        printWindow.document.write('<div>');
+        printWindow.document.write(table1);
+        printWindow.document.write('</div>');
+
+        printWindow.document.write('</div>');
+
+        printWindow.document.close();
+
+        printWindow.print();
+    }
+
+
+
+
+
+
+
+
+    function validateFormFields() {
+        // Reset all error messages and styles
+        var errorElements = document.querySelectorAll('.text-danger');
+        errorElements.forEach(function (element) {
+            element.innerHTML = "";
+        });
+
+        // Flag to track fields validation
+        var isValid = true;
+
+        // Validate Date
+        var dateField = $("#date").val();
+        var dateError = $(".dateError");
+        if (dateField.trim() === "") {
+            isValid = false;
+            dateError.text("Date is required");
+            $("#date").css("borderColor", "red");
+        } else {
+            $("#date").css("borderColor", "green");
+        }
+
+        // Validate PartyName
+        var partyField = $("#party").val();
+        var partyError = $(".partyError");
+        if (partyField === null) {
+            isValid = false;
+            partyError.text("Party Name is required");
+            $("#party").css("borderColor", "red");
+        } else {
+            $("#party").css("borderColor", "green");
+        }
+
+        // Validate ProductName
+        var productField = $("#product").val();
+        var productError = $(".productError");
+        if (productField === null || productField === "") {
+            isValid = false;
+            productError.text("Product Name is required");
+            $("#product").css("borderColor", "red");
+        } else {
+            $("#product").css("borderColor", "green");
+        }
+
+        // Validate Grade
+        var gradeField = $("#grade").val();
+        var gradeError = $(".gradeError");
+        if (gradeField === null || gradeField === "") {
+            isValid = false;
+            gradeError.text("Grade is required");
+            $("#grade").css("borderColor", "red");
+        } else {
+            $("#grade").css("borderColor", "green");
+        }
+
+        // Validate Quantity
+        var quantityField = $("#quantity").val();
+        var quantityError = $(".quantityError");
+        if (quantityField.trim() === "") {
+            isValid = false;
+            quantityError.text("Quantity is required");
+            $("#quantity").css("borderColor", "red");
+        } else {
+            $("#quantity").css("borderColor", "green");
+        }
+
+        return isValid;
+    }
+
+
+    // delete data ajax
+    function Delete(value) {
+        var id = value;
+
+        var userConfirmed = confirm("Are you sure you want to delete?");
+
+        if (userConfirmed) {
+            $.ajax({
+                url: '/RawMaterials/DeletePurchase/' + id,
+                type: 'POST',
+                success: function (data) {
+                    console.log("Delete successful");
+                    location.reload();
+                },
+                error: function (error) {
+                    console.error("Error deleting:", error);
+                    location.reload();
+                }
+            });
+        } else {
+            console.log("Deletion canceled by user");
+        }
+    }
+
+
+
+</script>
+

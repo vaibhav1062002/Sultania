@@ -1,0 +1,160 @@
+﻿@model List<LoomEntity>
+
+@{
+    Layout = "~/Views/Shared/demo.cshtml";
+}
+
+
+
+<h5 class="panel-title" style="color:#FFFFFF; background-color:#009991; width:100%; font-size:14px;  padding: 6px;" align="center"> &nbsp; Add Loom</h5>
+
+
+
+<div class="row">
+    <div class="col-md-2" style="margin-top:15px;"></div>
+    <div class="col-md-8" style="margin-top: 2vh;">
+
+        <div class="col-md-3"></div>
+        <form action="/Masters/InsertLoom" method="post" onsubmit="return validateForm()">
+            <div class="col-md-3" style="margin-bottom:5px">
+                <label class="control-label">Enter Loom No<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="Loom" id="Loom" placeholder="" oninput="validateForm()" />
+                <span id="LoomError" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-1" style="margin-top:15px;">
+                <button id="on" type="submit" class="btn mjks" style="color:#FFFFFF; height:30px; width:auto;">
+                    <i class="fa fa-plus"></i>ADD
+                </button>
+            </div>
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-3" style="margin-top:15px;">
+                @if (TempData["Loom"] != null)
+                {
+                    <div class="custom-alert" id="customAlert">
+                        Data Added Successfully..!
+                    </div>
+                }
+            </div>
+        </form>
+
+
+    </div>
+    <div class="col-md-2" style="margin-top:15px;"></div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-2" style="margin-top:15px;"></div>
+    <div class="col-md-8" style="margin-top:15px;">
+
+        <!-- START DEFAULT DATATABLE -->
+        <!-- <h5 class="panel-title" style="color:#FFFFFF; background-color:#754d35; width:100%; font-size:14px;" align="center"> <i class="fa fa-plus"></i> Added Party</h5> -->
+        <div class="panel-body" style="margin-top:5px; margin-bottom:15px;">
+            <table class="table datatable">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Loom Number</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @{
+                        var count = 1;
+                    }
+                    @foreach (var data in Model)
+                    {
+                        <tr>
+                            <td>@count</td>
+                            <td>@data.Loom</td>
+                            <td>
+                                <button style="background-color:#3399ff; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit" style="margin-left:5px;"></i></button>
+                                <button onclick="Delete(@data.Id)" style="background-color:#ff0000; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o" style="margin-left:5px;"></i></button>
+                            </td>
+                        </tr>
+
+                        count++;
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- END DEFAULT DATATABLE -->
+
+
+    </div>
+    <div class="col-md-2" style="margin-top:15px;"></div>
+</div>
+
+
+
+
+
+<script>
+
+    // Trigger animation on page load
+    window.onload = function () {
+        var alertElement = document.getElementById('customAlert');
+        alertElement.classList.add('show');
+
+        // Hide the alert after a delay
+        setTimeout(function () {
+            alertElement.classList.remove('show');
+        }, 3000); // Adjust the delay (in milliseconds) as needed
+    };
+
+
+
+    // ajax for delte data
+    function Delete(value) {
+        var id = value;
+        var userConfirmed = confirm("Are you sure you want to delete?");
+
+        if (userConfirmed) {
+            $.ajax({
+                url: '/Masters/DeleteLoom/' + id,
+                type: 'POST',
+                success: function (data) {
+                    console.log("Delete successful");
+                    location.reload();
+                },
+                error: function (error) {
+                    console.error("Error deleting:", error);
+                    location.reload();
+                }
+            });
+        } else {
+            console.log("Deletion canceled by user");
+        }
+    }
+
+
+
+    function validateForm() {
+        var Loom = document.getElementById('Loom').value;
+
+        document.getElementById('LoomError').innerHTML = "";
+
+        var isValid = true;
+
+        if (Loom === "") {
+            isValid = false;
+            document.getElementById('LoomError').innerHTML = "Loom is required.";
+        }
+
+
+        return isValid;
+    }
+
+</script>
+
+
+
+

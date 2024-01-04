@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Data",
+    "\\Views",
+    "\\Views\\Dashboard",
+    "\\Views\\Masters",
+    "\\Views\\RollDrafting",
+    "\\Views\\RotogravureProgram",
+    "\\Views\\Shared"
+  ],
+  "SelectedNode": "\\Controllers\\DashboardController.cs",
+  "PreviewInSolutionExplorer": false
+}

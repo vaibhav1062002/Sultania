@@ -1,0 +1,829 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\SultaniaOil.bundle.scp.css",
+      "PackagePath": "staticwebassets\\SultaniaOil.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\16fa2253-3a04-4ae0-a3fe-11033c011583_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\16fa2253-3a04-4ae0-a3fe-11033c011583_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\31360094-6cef-4d54-b96f-53c05b270948_Screenshot 2023-12-08 104826.png",
+      "PackagePath": "staticwebassets\\GST\\31360094-6cef-4d54-b96f-53c05b270948_Screenshot 2023-12-08 104826.png"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\3657971a-ea40-4220-be4d-f2315f9632f4_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\3657971a-ea40-4220-be4d-f2315f9632f4_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\3d4f84b0-dc2d-41cc-8a79-281164b0d062_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\3d4f84b0-dc2d-41cc-8a79-281164b0d062_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\3f7c2f8c-857f-49fc-bdd2-243f12abb57f_Screenshot 2023-12-08 104826.png",
+      "PackagePath": "staticwebassets\\GST\\3f7c2f8c-857f-49fc-bdd2-243f12abb57f_Screenshot 2023-12-08 104826.png"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\74be314e-9ba6-44c2-8c32-4f9a8dd1dd17_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\74be314e-9ba6-44c2-8c32-4f9a8dd1dd17_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\86bfab6d-6f2b-411a-9220-569f3bede694_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\86bfab6d-6f2b-411a-9220-569f3bede694_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\88050667-0f8a-4fe7-acb0-19732b82237f_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\88050667-0f8a-4fe7-acb0-19732b82237f_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\978c1dac-9dc9-4be4-b060-566550cecea5_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\978c1dac-9dc9-4be4-b060-566550cecea5_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\ba07559f-e988-4217-800c-f994e9e1fdc6_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\ba07559f-e988-4217-800c-f994e9e1fdc6_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\c8ff9169-8372-40c7-9563-7306ea791cf8_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\c8ff9169-8372-40c7-9563-7306ea791cf8_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\ca495ec0-0cd1-42f6-b3b7-fcde81e7d7cc_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\ca495ec0-0cd1-42f6-b3b7-fcde81e7d7cc_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\cc60f377-bf16-420f-93cb-b944923b212a_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\cc60f377-bf16-420f-93cb-b944923b212a_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\d357f22a-e05e-4428-974f-e7e3b3d97855_download.jpeg",
+      "PackagePath": "staticwebassets\\GST\\d357f22a-e05e-4428-974f-e7e3b3d97855_download.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\d409f6ca-745a-4f7f-9cc0-09a1cdb3d61b_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\d409f6ca-745a-4f7f-9cc0-09a1cdb3d61b_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\d6347fc9-a498-43d6-875e-9931ecd489b7_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\d6347fc9-a498-43d6-875e-9931ecd489b7_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\d8490bdf-93da-4e72-bc5d-ad1fa1d5a2cd_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\d8490bdf-93da-4e72-bc5d-ad1fa1d5a2cd_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\db38c2db-0aba-492e-b014-1e443dc5576d_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\db38c2db-0aba-492e-b014-1e443dc5576d_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\e5207564-8c6c-4c3a-ae27-f66d536b730d_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\e5207564-8c6c-4c3a-ae27-f66d536b730d_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\f1740ccf-d391-4bb4-8638-fe7b79de10cb_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\f1740ccf-d391-4bb4-8638-fe7b79de10cb_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\GST\\ffd88e26-4f56-4ce3-a2d2-44e6dc7f71ed_Instant-e-invoice-in-TallyPrime.jpg",
+      "PackagePath": "staticwebassets\\GST\\ffd88e26-4f56-4ce3-a2d2-44e6dc7f71ed_Instant-e-invoice-in-TallyPrime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\animate\\animate.min.css",
+      "PackagePath": "staticwebassets\\css\\animate\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\blueimp\\blueimp-gallery.min.css",
+      "PackagePath": "staticwebassets\\css\\blueimp\\blueimp-gallery.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\codemirror\\codemirror.css",
+      "PackagePath": "staticwebassets\\css\\codemirror\\codemirror.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\dropzone\\dropzone.css",
+      "PackagePath": "staticwebassets\\css\\dropzone\\dropzone.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\fontawesome\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\fonts\\fontawesome-webfont862f.eot",
+      "PackagePath": "staticwebassets\\css\\fonts\\fontawesome-webfont862f.eot"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\fonts\\fontawesome-webfont862f.svg",
+      "PackagePath": "staticwebassets\\css\\fonts\\fontawesome-webfont862f.svg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\fonts\\fontawesome-webfont862f.ttf",
+      "PackagePath": "staticwebassets\\css\\fonts\\fontawesome-webfont862f.ttf"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\fonts\\fontawesome-webfont862f.woff",
+      "PackagePath": "staticwebassets\\css\\fonts\\fontawesome-webfont862f.woff"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\fonts\\fontawesome-webfontd41d.eot",
+      "PackagePath": "staticwebassets\\css\\fonts\\fontawesome-webfontd41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\css\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\css\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\css\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\css\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\fonts\\glyphicons-halflings-regulard41d.eot",
+      "PackagePath": "staticwebassets\\css\\fonts\\glyphicons-halflings-regulard41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\fullcalendar\\fullcalendar.css",
+      "PackagePath": "staticwebassets\\css\\fullcalendar\\fullcalendar.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\img\\blueimp\\error-2.html",
+      "PackagePath": "staticwebassets\\css\\img\\blueimp\\error-2.html"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\img\\blueimp\\error.html",
+      "PackagePath": "staticwebassets\\css\\img\\blueimp\\error.html"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\img\\blueimp\\loading.html",
+      "PackagePath": "staticwebassets\\css\\img\\blueimp\\loading.html"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\img\\blueimp\\play-pause-2.html",
+      "PackagePath": "staticwebassets\\css\\img\\blueimp\\play-pause-2.html"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\img\\blueimp\\play-pause.html",
+      "PackagePath": "staticwebassets\\css\\img\\blueimp\\play-pause.html"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\img\\blueimp\\video-play-2.html",
+      "PackagePath": "staticwebassets\\css\\img\\blueimp\\video-play-2.html"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\img\\blueimp\\video-play.html",
+      "PackagePath": "staticwebassets\\css\\img\\blueimp\\video-play.html"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\jquery\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery\\jquery-ui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\mcustomscrollbar\\jquery.mCustomScrollbar.css",
+      "PackagePath": "staticwebassets\\css\\mcustomscrollbar\\jquery.mCustomScrollbar.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\mcustomscrollbar\\mCSB_buttons.png",
+      "PackagePath": "staticwebassets\\css\\mcustomscrollbar\\mCSB_buttons.png"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\notification.css",
+      "PackagePath": "staticwebassets\\css\\notification.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\nvd3\\nv.d3.css",
+      "PackagePath": "staticwebassets\\css\\nvd3\\nv.d3.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\popup.css",
+      "PackagePath": "staticwebassets\\css\\popup.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\rickshaw\\rickshaw.css",
+      "PackagePath": "staticwebassets\\css\\rickshaw\\rickshaw.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\summernote\\summernote.css",
+      "PackagePath": "staticwebassets\\css\\summernote\\summernote.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\theme-default - Copy.css",
+      "PackagePath": "staticwebassets\\css\\theme-default - Copy.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\theme-default.css",
+      "PackagePath": "staticwebassets\\css\\theme-default.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\css\\theme-defaultoldd.css",
+      "PackagePath": "staticwebassets\\css\\theme-defaultoldd.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\actions.js",
+      "PackagePath": "staticwebassets\\js\\actions.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\demo_charts_morris.js",
+      "PackagePath": "staticwebassets\\js\\demo_charts_morris.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\demo_charts_nvd3.js",
+      "PackagePath": "staticwebassets\\js\\demo_charts_nvd3.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\demo_charts_rickshaw.js",
+      "PackagePath": "staticwebassets\\js\\demo_charts_rickshaw.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\demo_dashboard.js",
+      "PackagePath": "staticwebassets\\js\\demo_dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\demo_icons.js",
+      "PackagePath": "staticwebassets\\js\\demo_icons.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\demo_maps.js",
+      "PackagePath": "staticwebassets\\js\\demo_maps.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\demo_tables.js",
+      "PackagePath": "staticwebassets\\js\\demo_tables.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\demo_tasks.js",
+      "PackagePath": "staticwebassets\\js\\demo_tasks.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\faq.js",
+      "PackagePath": "staticwebassets\\js\\faq.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\js\\plugins.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\blueimp\\jquery.blueimp-gallery.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\blueimp\\jquery.blueimp-gallery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\bootstrap\\bootstrap-colorpicker.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\bootstrap\\bootstrap-colorpicker.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\bootstrap\\bootstrap-datepicker.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\bootstrap\\bootstrap-datepicker.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\bootstrap\\bootstrap-file-input.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\bootstrap\\bootstrap-file-input.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\bootstrap\\bootstrap-select.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\bootstrap\\bootstrap-select.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\bootstrap\\bootstrap-timepicker.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\bootstrap\\bootstrap-timepicker.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\bootstrap\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\bootstrap\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\codemirror\\codemirror.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\codemirror\\codemirror.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\codemirror\\mode\\clike\\clike.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\codemirror\\mode\\clike\\clike.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\codemirror\\mode\\css\\css.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\codemirror\\mode\\css\\css.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\codemirror\\mode\\htmlmixed\\htmlmixed.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\codemirror\\mode\\htmlmixed\\htmlmixed.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\codemirror\\mode\\javascript\\javascript.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\codemirror\\mode\\javascript\\javascript.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\codemirror\\mode\\php\\php.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\codemirror\\mode\\php\\php.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\codemirror\\mode\\xml\\xml.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\codemirror\\mode\\xml\\xml.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\datatables\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\datatables\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\daterangepicker\\daterangepicker.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\daterangepicker\\daterangepicker.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\dropzone\\dropzone.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\dropzone\\dropzone.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\fileinput\\fileinput.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\fileinput\\fileinput.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\filetree\\jqueryFileTree.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\filetree\\jqueryFileTree.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\fullcalendar\\fullcalendar.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\fullcalendar\\fullcalendar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\highlight\\jquery.highlight-4.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\highlight\\jquery.highlight-4.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\icheck\\icheck.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\icheck\\icheck.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\jquery-validation\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\jquery-validation\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\jquery\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\jquery\\jquery-ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\jquery\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\jvectormap\\jquery-jvectormap-1.2.2.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\jvectormap\\jquery-jvectormap-1.2.2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\jvectormap\\jquery-jvectormap-europe-mill-en.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\jvectormap\\jquery-jvectormap-europe-mill-en.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\jvectormap\\jquery-jvectormap-us-aea-en.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\jvectormap\\jquery-jvectormap-us-aea-en.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\jvectormap\\jquery-jvectormap-world-mill-en.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\jvectormap\\jquery-jvectormap-world-mill-en.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\knob\\jquery.knob.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\knob\\jquery.knob.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\maskedinput\\jquery.maskedinput.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\maskedinput\\jquery.maskedinput.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\mcustomscrollbar\\jquery.mCustomScrollbar.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\mcustomscrollbar\\jquery.mCustomScrollbar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\moment.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\morris\\morris.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\morris\\morris.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\morris\\raphael-min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\morris\\raphael-min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\notifications\\notifications\\css\\lobibox.min.css",
+      "PackagePath": "staticwebassets\\js\\plugins\\notifications\\notifications\\css\\lobibox.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\notifications\\notifications\\js\\lobibox.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\notifications\\notifications\\js\\lobibox.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\notifications\\notifications\\js\\notification-custom-script.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\notifications\\notifications\\js\\notification-custom-script.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\notifications\\notifications\\js\\notifications.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\notifications\\notifications\\js\\notifications.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\noty\\jquery.noty.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\noty\\jquery.noty.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\noty\\layouts\\topCenter.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\noty\\layouts\\topCenter.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\noty\\layouts\\topLeft.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\noty\\layouts\\topLeft.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\noty\\layouts\\topRight.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\noty\\layouts\\topRight.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\noty\\themes\\default.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\noty\\themes\\default.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\nvd3\\lib\\d3.v3.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\nvd3\\lib\\d3.v3.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\nvd3\\nv.d3.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\nvd3\\nv.d3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\owl\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\owl\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\rangeslider\\jQAllRangeSliders-min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\rangeslider\\jQAllRangeSliders-min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\rickshaw\\d3.v3.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\rickshaw\\d3.v3.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\rickshaw\\rickshaw.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\rickshaw\\rickshaw.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\scrolltotop\\scrolltopcontrol.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\scrolltotop\\scrolltopcontrol.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\smartwizard\\jquery.smartWizard-2.0.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\smartwizard\\jquery.smartWizard-2.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\sparkline\\jquery.sparkline.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\sparkline\\jquery.sparkline.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\summernote\\summernote.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\summernote\\summernote.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\tableexport\\html2canvas.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\tableexport\\html2canvas.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\tableexport\\jquery.base64.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\tableexport\\jquery.base64.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\tableexport\\jspdf\\jspdf.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\tableexport\\jspdf\\jspdf.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\tableexport\\jspdf\\libs\\base64.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\tableexport\\jspdf\\libs\\base64.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\tableexport\\jspdf\\libs\\sprintf.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\tableexport\\jspdf\\libs\\sprintf.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\tableexport\\tableExport.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\tableexport\\tableExport.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\tagsinput\\jquery.tagsinput.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\tagsinput\\jquery.tagsinput.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\tocify\\jquery.tocify.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\tocify\\jquery.tocify.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\tour\\bootstrap-tour.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\tour\\bootstrap-tour.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\tour\\bootstro.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\tour\\bootstro.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\validationengine\\jquery.validationEngine.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\validationengine\\jquery.validationEngine.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\plugins\\validationengine\\languages\\jquery.validationEngine-en.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\validationengine\\languages\\jquery.validationEngine-en.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\portlet.js",
+      "PackagePath": "staticwebassets\\js\\portlet.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\settings.js",
+      "PackagePath": "staticwebassets\\js\\settings.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\sweetalert.js",
+      "PackagePath": "staticwebassets\\js\\sweetalert.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\js\\sweetalert2.min.js",
+      "PackagePath": "staticwebassets\\js\\sweetalert2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\logo\\c1.png",
+      "PackagePath": "staticwebassets\\logo\\c1.png"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\logo\\c2.png",
+      "PackagePath": "staticwebassets\\logo\\c2.png"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\logo\\cotton.png",
+      "PackagePath": "staticwebassets\\logo\\cotton.png"
+    },
+    {
+      "Id": "C:\\Users\\vaibh\\Desktop\\SultaniaOil\\wwwroot\\logo\\logo (2).jpg",
+      "PackagePath": "staticwebassets\\logo\\logo (2).jpg"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.SultaniaOil.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.build.SultaniaOil.props",
+      "PackagePath": "build\\SultaniaOil.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.SultaniaOil.props",
+      "PackagePath": "buildMultiTargeting\\SultaniaOil.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildTransitive.SultaniaOil.props",
+      "PackagePath": "buildTransitive\\SultaniaOil.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

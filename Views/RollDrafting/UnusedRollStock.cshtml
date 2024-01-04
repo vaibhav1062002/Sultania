@@ -1,0 +1,199 @@
+﻿
+@{
+    Layout = "~/Views/Shared/RollDraftingHeaderFooter.cshtml";
+}
+
+@model List<UnusedRollStockEntity>
+
+
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .custom-alert {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+       @@keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+       @@keyframes slideOut {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+        }
+    </style>
+
+
+<!-- <h2 style="margin-top: 20px;">UNUSED ROLL STOCK</h2> -->
+<h5 class="panel-title" style="color:#FFFFFF; background-color:#009991; width:100%; font-size:14px;  padding: 6px;" align="center"> &nbsp;Unused Roll Stock</h5>
+<div class="row">
+     
+        
+        <div class="col-md-12" style="margin-top: 2vh;">
+
+    <form action="/RollDrafting/InsertUnusedRollstock" method="post">
+
+        <div class="col-md-1" style="margin-top:5px">
+            <label class="control-label">Size & Denier<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="SizeAndDenier" placeholder="" />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Meter<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="Meter" placeholder="" />
+        </div>
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Weight<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="Weight" placeholder="" />
+        </div>
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Average<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="Average" placeholder="" />
+        </div>
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Quantity<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="Quantity" placeholder="" />
+        </div>
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">No of Rolls<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="NoOfRolls" placeholder="" />
+        </div>
+        <div class="col-md-2" style="margin-top: 5px;">
+            <label class="control-label">Date<font color="#FF0000">*</font></label>
+            <input type="date" class="form-control" name="Date" placeholder="" />
+        </div>
+        <div class="col-md-2" style="margin-top:20px;">
+            <button id="on" type="submit" class="btn mjks" style="color:#FFFFFF; height:30px; width:100px;"><i class="fa fa-floppy-o" aria-hidden="true"></i> SUBMIT</button>
+        </div>
+
+
+
+        </form>
+
+
+    </div>
+</div>
+
+<div class="col-md-3" style="margin-top:15px;">
+    @if (TempData["unused"] != null)
+    {
+        <div class="custom-alert" id="customAlert">
+            Data Added Successfully..!
+        </div>
+    }
+</div>
+
+
+<hr style="border: 1px solid #000000bf;
+opacity: 0.2;">
+
+
+
+<div class="row">
+
+    <div class="col-md-12" style="margin-top:15px;">
+
+
+        <div class="panel-body" style="margin-top:5px; margin-bottom:15px;">
+            <div style="overflow-x: auto;">
+
+                <table class="table datatable">
+                    <thead>
+
+                        <tr>
+                            <th>Sr No </th>
+                            <th>Size & Denier</th>
+                            <th>Meter</th>
+                            <th>Weight</th>
+                            <th>Avg</th>
+                            <th>Quantity</th>
+                            <th>No of Rolls</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var counter = 1;
+                        }
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@counter</td>
+                                <td>@item.SizeAndDenier</td>
+                                <td>@item.Meter</td>
+                                <td>@item.Weight</td>
+                                <td>@item.Average</td>
+                                <td>@item.Quantity</td>
+                                <td>@item.NoOfRolls</td>
+                                <td>@item.Date.ToShortDateString()</td>
+                                <td style="width: 7%">
+                                    <button style="background-color:#3399ff; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit" style="margin-left:5px;"></i></button>
+                                    <button style="background-color:#ff0000; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o" style="margin-left:5px;"></i></button>
+                                </td>
+                            </tr>
+                            counter ++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+<script>
+    // Trigger animation on page load
+    window.onload = function () {
+        var alertElement = document.getElementById('customAlert');
+        alertElement.classList.add('show');
+
+        // Hide the alert after a delay
+        setTimeout(function () {
+            alertElement.classList.remove('show');
+        }, 3000); // Adjust the delay (in milliseconds) as needed
+    };
+</script>

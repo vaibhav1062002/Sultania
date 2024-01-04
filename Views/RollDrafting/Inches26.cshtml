@@ -1,0 +1,295 @@
+﻿
+@{
+    Layout = "~/Views/Shared/RollDraftingHeaderFooter.cshtml";
+}
+
+@model List<Inches26Entity>
+
+
+
+
+<style>
+
+
+    .custom-alert {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @@keyframes slideIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @@keyframes slideOut {
+        from {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        to {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+    }
+</style>
+
+
+
+<div class="col-md-3" style="margin-top:15px;">
+    @if (TempData["inches26"] != null)
+    {
+        <div class="custom-alert" id="customAlert">
+            Data Added Successfully..!
+        </div>
+    }
+</div>
+
+<h5 class="panel-title" style="color:#FFFFFF; background-color:#009991; width:100%; font-size:14px;  padding: 6px;" align="center"> &nbsp; 26 Inches</h5>
+
+<div class="row">
+
+    <div class="col-md-12" style="margin-top: 2vh;">
+
+        <form action="/RollDrafting/InsertInches26" method="post">
+            <div class="col-md-2" style="margin-top: 5px;">
+                <label class="control-label">Date<font color="#FF0000">*</font></label>
+                <input type="Date" class="form-control" name="Date" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Roll Number<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="RollNumber" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Size<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="Size" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Width In MM<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="WidthInMM" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Loom Number<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="LoomNumber" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">MTRS<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="MTRS" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">G Weight<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="GWeight" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">C Weight<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="CWeight" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">N Weight<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="NWeight" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Average<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="Average" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Dennier<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="Dennier" placeholder="" />
+            </div>
+
+            <div class="col-md-2" style="margin-top: 15px;">
+                <label class="control-label">Date<font color="#FF0000">*</font></label>
+                <input type="date" class="form-control" name="Date2" placeholder="" />
+            </div>
+
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Issue Of Lamination<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="IssueOfLamination" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 37px; text-align: center;">
+                <h5>Issue For BCS</h5>
+            </div>
+
+            <div class="col-md-1" style="margin-top: 15px;">
+                <label class="control-label">Meter<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="IssueForBCSMeter" placeholder="" />
+            </div>
+
+
+            <div class="col-md-1" style="margin-top: 15px;">
+                <label class="control-label">Weight<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="IssueForBCSWeight" placeholder="" />
+            </div>
+
+
+            <div class="col-md-1" style="margin-top: 37px; text-align: center;">
+                <h5>Balance Weight</h5>
+            </div>
+
+            <div class="col-md-1" style="margin-top: 15px;">
+                <label class="control-label">Meter<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="BalanceWeightMeter" placeholder="" />
+            </div>
+
+
+
+            <div class="col-md-1" style="margin-top: 15px;">
+                <label class="control-label">Weight<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="BalanceWeightWeight" placeholder="" />
+            </div>
+
+            <div class="col-md-2" style="font-weight: bold; margin-top: 15px;">
+                <button id="on" type="submit" class="btn mjks"
+                        style="color:#FFFFFF;height:30px;margin-top: 17px;width: 99px;">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>SUBMIT
+                </button>
+            </div>
+        </form>
+
+
+    </div>
+
+</div>
+
+
+
+<hr style="border: 1px solid #000000bf;
+            opacity: 0.2;">
+
+
+<div class="row">
+
+    <div class="col-md-12" style="margin-top:15px;">
+
+
+        <div class="panel-body" style="margin-top:5px; margin-bottom:15px;">
+            <div style="overflow-x: auto;">
+
+                <table class="table datatable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Roll Number</th>
+                            <th>Size</th>
+                            <th>Width In MM</th>
+                            <th>Loom Number</th>
+                            <th>MTRS</th>
+                            <th>G Weight</th>
+                            <th>C Weight</th>
+                            <th>N Weight</th>
+                            <th>Average</th>
+                            <th>Dennier</th>
+                            <th>Date2</th>
+                            <th>Issue Of Lamination</th>
+                            <th>Issue For BCS Meter</th>
+                            <th>Issue For BCS Weight</th>
+                            <th>Balance Weight Meter</th>
+                            <th>Balance Weight Weight</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Date.ToShortDateString()</td>
+                                <td>@item.RollNumber</td>
+                                <td>@item.Size</td>
+                                <td>@item.WidthInMM</td>
+                                <td>@item.LoomNumber</td>
+                                <td>@item.MTRS</td>
+                                <td>@item.GWeight</td>
+                                <td>@item.CWeight</td>
+                                <td>@item.NWeight</td>
+                                <td>@item.Average</td>
+                                <td>@item.Dennier</td>
+                                <td>@item.Date2.ToShortDateString()</td>
+                                <td>@item.IssueOfLamination</td>
+                                <td>@item.IssueForBCSMeter</td>
+                                <td>@item.IssueForBCSWeight</td>
+                                <td>@item.BalanceWeightMeter</td>
+                                <td>@item.BalanceWeightWeight</td>
+                                <td style="width: 7%">
+                                    <button style="background-color:#3399ff; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit" style="margin-left:5px;"></i></button>
+                                    <button style="background-color:#ff0000; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o" style="margin-left:5px;"></i></button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    // Trigger animation on page load
+    window.onload = function () {
+        var alertElement = document.getElementById('customAlert');
+        alertElement.classList.add('show');
+
+        // Hide the alert after a delay
+        setTimeout(function () {
+            alertElement.classList.remove('show');
+        }, 3000); // Adjust the delay (in milliseconds) as needed
+    };
+</script>
+

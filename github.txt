@@ -1,0 +1,40 @@
+How to collaborate on GitHub?
+
+Type of Team
+ 1 . Author
+ 2 . Contributor (Team)
+
+Without Collaboration ?
+
+  You are the only one who is working on code.
+  Hence will take lot more time to complete the project
+
+Benefits of Collaborating
+   Your Team is collaborating to your code.
+   Hence Project Development is faster.
+
+7 Steps of Collaboration
+
+1. Fork the target repo to your own account.
+2. Clone the repo to your local machine.
+ git clone repolink
+
+3. Check out a new "topic branch" and make changes.
+ git checkout -b checkout_page
+
+4. Stage and Commit Your Changes.
+git add .
+
+
+5. Committing 
+ git commit -am "checkout page done"
+
+Step 6: Pushing
+ git push origin checkout_page
+
+
+Step 7: Creating a Pull Request (PR)
+
+ Use the diff viewer on GitHub to create a pull request via a       discussion.
+6. Make any requested changes.
+7. The pull request is then merged (usually into the master    branch) and the topic branch is    deleted from the upstream    (target) repo.

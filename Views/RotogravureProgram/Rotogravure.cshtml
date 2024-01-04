@@ -1,0 +1,425 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+@{
+    Layout = "~/Views/Shared/DashboardComan.cshtml";
+}
+
+@model List<RotogravureEntity>
+
+
+
+
+<!-- <h2 style="margin-top: 20px;color:#145566; font-weight: bold; margin-left: 20px;">ROTOGRAVURE PROGRAMME & PRODUCTION</h2> -->
+<h5 class="panel-title" style="color:#FFFFFF; background-color:#009991; width:100%; font-size:14px;  padding: 6px; margin-top:2px" align="center"> &nbsp;ROTOGRAVURE PROGRAMME & PRODUCTION</h5>
+@if (TempData["InsertRotogravure"] != null)
+{
+    <div class="custom-alert" id="customAlert">
+        Data Added Successfully..!
+    </div>
+}
+
+<div class="row">
+
+    <div class="col-md-12" style="margin-top:15px;">
+
+<form action="/RotogravureProgram/InsertRotogravure" method="post">
+    <div class="row">
+
+        <div class="col-md-12" style="margin-top: 2vh;">
+
+
+
+
+
+            <div class="col-md-1" style="margin-top:5px">
+                <label class="control-label">Job Name<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="JobName" placeholder="" />
+            </div>
+            <div class="col-md-2" style="margin-top: 5px;">
+                <label class="control-label">Date<font color="#FF0000">*</font></label>
+                <input type="date" class="form-control" name="Date" placeholder="" />
+            </div>
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Shift<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="Shift" placeholder="" />
+            </div>
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Pro Number<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="ProNumber" placeholder="" />
+            </div>
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label"> No of Cylender <font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="NoOfCylender" placeholder="" />
+            </div>
+
+            <div class="col-md-2" style="margin-top: 5px;">
+                <label class="control-label">Meter To Be Printed<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="MeterToBePrinted" placeholder="" />
+            </div>
+
+
+            <div class="col-md-2" style="margin-top:5px">
+                <label>Color Details<font color="#FF0000">*</font></label>
+                <select class="form-control select" name="Color" data-live-search="true">
+                    <option value="MAGENTA">MAGENTA</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="CYAN">CYAN</option>
+                    <option value="Black">Black</option>
+                </select>
+            </div>
+
+            <!-- </div>
+            </div> -->
+        </div>
+    </div>
+
+    <hr style="border: 1px solid #000000bf;
+                  opacity: 0.2;">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style=" color:#ee2222; font-weight: bold; margin-left:7px;">PLAIN BOPP ROLL DETAILS</h3>
+        </div>
+
+        <div class="col-md-6">
+            <h3 style="color:orange; font-weight: bold; margin-left: 120px;">PRINTED BOPP ROLL DETAILS</h3>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12" style="margin-top: 2vh;">
+
+
+            <div class="col-md-2" style="margin-top:5px">
+                <label class="control-label">BOPP Roll No<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="PlainBoppRollNo" placeholder="" />
+            </div>
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Meter<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="PlainMeter" placeholder="" />
+            </div>
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Net weight<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="PlainNetWeight" placeholder="" />
+            </div>
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Avg Weight<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="PlainAvgWeight" placeholder="" />
+            </div>
+
+            <div class="col-md-2" style="margin-top:5px">
+            </div>
+
+            <div class="col-md-2" style="margin-top:5px">
+                <label class="control-label">BOPP Roll No<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="PrintedBoppRollNo" placeholder="" />
+            </div>
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Meter<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="PrintedMeter" placeholder="" />
+            </div>
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Net weight<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="PrintedNetWeight" placeholder="" />
+            </div>
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Avg Weight<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="PrintedAvgWeight" placeholder="" />
+            </div>
+        </div>
+    </div>
+
+    <hr style="border: 1px solid #000000bf;
+    opacity: 0.2;">
+    <h3 style="color:#145566; font-weight: bold; margin-left: 14px;">SLITTED BOPP ROLL DETAILS</h3>
+    <div class="row">
+
+        <div class="col-md-12" style="margin-top: 2vh;">
+
+            <div class="col-md-2" style="margin-top:5px">
+                <label class="control-label">BOPP Roll No<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="SlittedBoppRollNo" placeholder="" />
+            </div>
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Meter<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="SlittedMeter" placeholder="" />
+            </div>
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Net weight<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="SlittedNetWeight" placeholder="" />
+            </div>
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Avg Weight<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="SlittedAvgWeight" placeholder="" />
+            </div>
+        </div>
+    </div>
+
+    <hr style="border: 1px solid #000000bf;
+        opacity: 0.2;">
+
+
+    <h3 style="margin-left: 20px; color:#145566; text-align: center; font-weight: bold;"> INK CONSUMPTION DATA</h3>
+
+
+
+
+
+    <div class="row">
+
+        <div class="col-md-12" style="margin-top: 2vh;">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 style="color:#ee2222; font-weight: bold;">Fresh Ink</h3>
+                </div>
+
+                <div class="col-md-6">
+                    <h3 style=" color:orange; font-weight: bold; margin-left: 120px;">Mix Ink</h3>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-2" style="margin-top: 5px;">
+                <label>Color Details<font color="#FF0000">*</font></label>
+                <select class="form-control select" name="freshInkColor" data-live-search="true">
+                    <option>MAGENTA</option>
+                    <option>Yellow</option>
+                    <option>CYAN</option>
+                    <option>Black</option>
+                </select>
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Issued<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="FreshIssued" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Returned<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="FreshRETURNED" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Act Cons<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="FreshActConsuption" placeholder="" />
+            </div>
+
+            <div class="col-md-2" style="margin-top: 5px;">
+                <!-- <label class="control-label">Act Consuption<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="ActConsuption" placeholder="" /> -->
+            </div>
+
+
+            <div class="col-md-2" style="margin-top: 5px;">
+                <label>Color Details<font color="#FF0000">*</font></label>
+                <select class="form-control select" name="MixInkColor" data-live-search="true">
+                    <option>MAGENTA</option>
+                    <option>Yellow</option>
+                    <option>CYAN</option>
+                    <option>Black</option>
+                </select>
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Issued<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="MixIssued" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Returned<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="MixReturned" placeholder="" />
+            </div>
+
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Act Cons<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="MixActConsuption" placeholder="" />
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <hr style="border: 1px solid #000000bf;
+opacity: 0.2;">
+    <div class="row">
+
+        <div class="col-md-12" style="margin-top: 2vh;">
+            <h3 style="color:#145566; font-weight: bold; margin-left: 7px;">CHEMICAL CONSUMPTION</h3>
+
+            <div class="col-md-2" style="margin-top: 5px;">
+                <label class="control-label"> Particulars <font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="ChemicalParticulars" placeholder="" />
+            </div>
+
+            <div class="col-md-2" style="margin-top: 5px;">
+                <label class="control-label">Issued<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="ChemicalIssued" placeholder="" />
+            </div>
+
+            <div class="col-md-2" style="margin-top: 5px;">
+                <label class="control-label">Returned<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="ChemicalReturned" placeholder="" />
+            </div>
+
+            <div class="col-md-2" style="margin-top: 5px;">
+                <label class="control-label">Act Cons<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="ChemicalActConsuption" placeholder="" />
+            </div>
+
+
+            <div class="col-md-2" style="margin-left: 2vh; margin-top:5px">
+                <label>Planned By<font color="#FF0000">*</font></label>
+                <select class="form-control select" name="freshInkColor" data-live-search="true">
+                    <option>ROTOGRAVURE OPERATOR</option>
+                    <option>SUPERVOISOR </option>
+                </select>
+            </div>
+
+            <div class="col-md-1" style="font-weight: bold; margin-top:5px">
+                <button id="on" type="submit" class="btn mjks"
+                        style="color:#FFFFFF;height:30px;margin-top: 17px;width: 99px;">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>SUBMIT
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</form>
+
+</dive>
+</div>
+
+<hr style="border: 1px solid #000000bf;
+opacity: 0.2;">
+
+
+
+<div class="row">
+
+    <div class="col-md-12" style="margin-top:15px;">
+
+        <!-- START DEFAULT DATATABLE  -->
+
+
+
+        <div class="panel-body" style="margin-top:5px; margin-bottom:15px;">
+            <div style="overflow-x: auto;">
+
+                <table class="table datatable">
+                    <thead>
+
+                        <tr>
+
+
+                            <th>Sr No</th>
+
+                            <th>JobName</th>
+                            <th>Date</th>
+                            <th>Shift</th>
+                            <th>ProNumber</th>
+                            <th>NoOfCylender</th>
+                            <th>MeterToBePrinted</th>
+                            <th>Color</th>
+                            <th>PlainBoppRollNo</th>
+                            <th>PlainMeter</th>
+                            <th>PlainNetWeight</th>
+                            <th>PlainAvgWeight</th>
+                            <th>PrintedBoppRollNo</th>
+                            <th>PrintedMeter</th>
+                            <th>PrintedNetWeight</th>
+                            <th>PrintedAvgWeight</th>
+                            <th>SlittedBoppRollNo</th>
+                            <th>SlittedMeter</th>
+                            <th>SlittedNetWeight</th>
+                            <th>SlittedAvgWeight</th>
+                            <th>FreshInkColor</th>
+                            <th>FreshIssued</th>
+                            <th>FreshReturned</th>
+                            <th>FreshActConsuption</th>
+                            <th>MixInkColor</th>
+                            <th>MixIssued</th>
+                            <th>MixReturned</th>
+                            <th>MixActConsuption</th>
+                            <th>ChemicalParticulars</th>
+                            <th>ChemicalIssued</th>
+                            <th>ChemicalReturned</th>
+                            <th>ChemicalActConsuption</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var counter = 1;
+                        }
+                        @foreach (var data in Model)
+                        {
+                            <tr>
+                                <td>@counter</td>
+                                <td>@data.JobName</td>
+                                <td>@data.Date</td>
+                                <td>@data.Shift</td>
+                                <td>@data.ProNumber</td>
+                                <td>@data.NoOfCylender</td>
+                                <td>@data.MeterToBePrinted</td>
+                                <td>@data.Color</td>
+                                <td>@data.PlainBoppRollNo</td>
+                                <td>@data.PlainMeter</td>
+                                <td>@data.PlainNetWeight</td>
+                                <td>@data.PlainAvgWeight</td>
+                                <td>@data.PrintedBoppRollNo</td>
+                                <td>@data.PrintedMeter</td>
+                                <td>@data.PrintedNetWeight</td>
+                                <td>@data.PrintedAvgWeight</td>
+                                <td>@data.SlittedBoppRollNo</td>
+                                <td>@data.SlittedMeter</td>
+                                <td>@data.SlittedNetWeight</td>
+                                <td>@data.SlittedAvgWeight</td>
+                                <td>@data.FreshInkColor</td>
+                                <td>@data.FreshIssued</td>
+                                <td>@data.FreshReturned</td>
+                                <td>@data.FreshActConsuption</td>
+                                <td>@data.MixInkColor</td>
+                                <td>@data.MixIssued</td>
+                                <td>@data.MixReturned</td>
+                                <td>@data.MixActConsuption</td>
+                                <td>@data.ChemicalParticulars</td>
+                                <td>@data.ChemicalIssued</td>
+                                <td>@data.ChemicalReturned</td>
+                                <td>@data.ChemicalActConsuption</td>
+                                <td>
+                                    <button style="background-color:#3399ff; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit" style="margin-left:5px;"></i></button>
+                                    <button style="background-color:#ff0000; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                </td>
+                            </tr>
+
+                            counter++;
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <!-- END DEFAULT DATATABLE  -->
+
+
+    </div>
+
+</div>
+               

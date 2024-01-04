@@ -1,0 +1,163 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SultaniaOil
+build_property.RootNamespace = SultaniaOil
+build_property.ProjectDir = C:\Users\vaibh\Desktop\SultaniaOil\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\vaibh\Desktop\SultaniaOil
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/DailyProduction/DailyProduction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFpbHlQcm9kdWN0aW9uXERhaWx5UHJvZHVjdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Dashboard/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Dashboard/LoomPlanReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXExvb21QbGFuUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Dashboard/TapeLineProgramme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFRhcGVMaW5lUHJvZ3JhbW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/LoomProgramme/LoomProgramme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9vbVByb2dyYW1tZVxMb29tUHJvZ3JhbW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Masters/Bagtype.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xCYWd0eXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Masters/ColorDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xDb2xvckRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Masters/Grade.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xHcmFkZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Masters/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Masters/TapeQLT.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xUYXBlUUxULmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Masters/Vendor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyc1xWZW5kb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/RawMaterials/Purches.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmF3TWF0ZXJpYWxzXFB1cmNoZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Reports/RawMaterilas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xSYXdNYXRlcmlsYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/RollDrafting/19Inches.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbERyYWZ0aW5nXDE5SW5jaGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/RollDrafting/CM45.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbERyYWZ0aW5nXENNNDUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/RollDrafting/Flatesheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbERyYWZ0aW5nXEZsYXRlc2hlZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/RollDrafting/Inches26.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbERyYWZ0aW5nXEluY2hlczI2LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/RollDrafting/Inches28.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbERyYWZ0aW5nXEluY2hlczI4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/RollDrafting/Inches30.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbERyYWZ0aW5nXEluY2hlczMwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/RollDrafting/MM400.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbERyYWZ0aW5nXE1NNDAwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/RollDrafting/MM850.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbERyYWZ0aW5nXE1NODUwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/RollDrafting/UnusedRollStock.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sbERyYWZ0aW5nXFVudXNlZFJvbGxTdG9jay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/RotogravureProgram/Rotogravure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm90b2dyYXZ1cmVQcm9ncmFtXFJvdG9ncmF2dXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Shared/AllProgramesHeaderFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFsbFByb2dyYW1lc0hlYWRlckZvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Shared/DashboardComan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERhc2hib2FyZENvbWFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Shared/demo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGRlbW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Shared/Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEhlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Shared/RollDraftingComman.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFJvbGxEcmFmdGluZ0NvbW1hbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Shared/RollDraftingHeaderFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFJvbGxEcmFmdGluZ0hlYWRlckZvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/vaibh/Desktop/SultaniaOil/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1wt6hs1je6

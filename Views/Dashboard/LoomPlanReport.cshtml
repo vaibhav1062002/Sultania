@@ -1,0 +1,498 @@
+﻿@{
+    Layout = "~/Views/Shared/DashboardComan.cshtml";
+}
+
+@model List<LoomProgramEntity>
+
+
+<style>
+    /* Styles for the popup */
+    #popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+    /* Hide the table and calculation inputs initially */
+    #dataTableWrapper,
+    .form-group-total {
+        display: none;
+    }
+<!-- DataTables Buttons CSS -->
+    .dataTables_wrapper .dataTables_length,
+    .dataTables_wrapper .dataTables_buttons {
+        margin-right: 20px;
+    }
+    /* Style the buttons with icons and colors */
+    .dt-buttons .btn {
+        background-color: #3498DB;
+        /* Button background color */
+        color: #fff;
+        /* Button text color */
+        border-color: #2980B9;
+        /* Button border color */
+    }
+
+        .dt-buttons .btn:hover {
+            background-color: #2980B9;
+            /* Hover background color */
+        }
+<!-- Customize button styles -->
+    .dt-buttons button {
+        color: rgb(252, 250, 250);
+        font-weight: 500;
+    }
+
+        .dt-buttons button:hover {
+            color: black;
+        }
+
+        .dt-buttons button.buttons-copy {
+            background-color: #007BFF;
+        }
+
+        .dt-buttons button.buttons-csv {
+            background-color: #28A745;
+        }
+
+        .dt-buttons button.buttons-excel {
+            background-color: #FFC107;
+        }
+
+        .dt-buttons button.buttons-pdf {
+            background-color: #DC3545;
+        }
+
+        .dt-buttons button.buttons-print {
+            background-color: #6C757D;
+        }
+
+    .error-message {
+        color: red;
+    }
+
+</style>
+
+
+
+                <!-- <h2 style="margin-top: 20px;color:#145566; font-weight: bold; margin-left: 20px;">LOOM PLANNING REPORT</h2> -->
+<h5 class="panel-title" style="color:#FFFFFF; background-color:#009991; width:100%; font-size:14px;  padding: 6px; margin-top:2px;" align="center"> &nbsp; Loom Planning Report</h5>
+
+                <div class="row">
+
+                    <div class="col-md-12" style="margin-top: 2vh;">
+
+        <form id="myForm" action="/Dashboard/InsertLoomPro" method="post">
+
+
+            <!-- Inches Field -->
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label>Inches<font color="#FF0000">*</font></label>
+                <select class="form-control select" name="Inches" data-live-search="true">
+                    <option value="19">19</option>
+                    <option value="24">24</option>
+                </select>
+                <div id="inchesError" class="error-message"></div>
+            </div>
+
+            <!-- Shift Field -->
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label>Shift<font color="#FF0000">*</font></label>
+                <select class="form-control select" name="Shift" data-live-search="true">
+                    <option value="A">Shift A</option>
+                    <option value="B">Shift B</option>
+                </select>
+                <div id="shiftError" class="error-message"></div>
+            </div>
+
+            <!-- Product Name Field -->
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Product Name<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="ProductName" />
+                <div id="productNameError" class="error-message"></div>
+            </div>
+
+            <!-- Production Field -->
+            <div class="col-md-1" style="margin-top: 5px;">
+                <label class="control-label">Production<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="Production" />
+                <div id="productionError" class="error-message"></div>
+            </div>
+
+            <!-- Date Field -->
+            <div class="col-md-2" style="margin-top: 5px;">
+                <label class="control-label">Date<font color="#FF0000">*</font></label>
+                <input type="date" class="form-control" name="Date" />
+                <div id="dateError" class="error-message"></div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-md-2" style="margin-top:20px;">
+                <button id="submitBtn" type="submit" class="btn mjks" style="color:#FFFFFF; height:30px;width: 99px;"><i class="fa fa-floppy-o" aria-hidden="true"></i>SUBMIT</button>
+            </div>
+
+            <div class="col-md-2" style="margin-top:20px;">
+            </div>
+
+            <div class="col-md-2">
+                @if (TempData["InsertLoomPro"] != null)
+                {
+                    <div class="custom-alert" id="customAlert">
+                        Data Added Successfully ..!
+                    </div>
+                }
+            </div>
+
+
+        </form>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div class="row">
+
+                    <div class="col-md-12" style="margin-top:15px;">
+
+                        <!-- START DEFAULT DATATABLE  -->
+
+                        <div class="panel-body" style="margin-top:5px; margin-bottom:15px;">
+                            <div style="overflow-x: auto;">
+
+                                <table class="table datatable">
+                                    <thead>
+
+                                        <tr>
+                                            <th>No</th>
+                            <th>Inches</th>
+                            <th>Product</th>
+                            <th>Shift</th>
+                            <th>Prodction</th>
+                            <th>Date</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                        @{
+                            var counter = 1;
+                        }
+
+                        @foreach (var data in Model)
+                        {
+                            <tr>
+                                <td>@counter</td>
+                                <td>@data.Inches</td>
+                                <td>@data.ProductName</td>
+                                <td>@data.Shift</td>
+                                <td>@data.Production</td>
+                                <td>@data.Date.ToShortDateString()</td>
+                                <td>
+                                    <button style="background-color:#3399ff; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit" style="margin-left:5px;"></i></button>
+                                    <button style="background-color:#ff0000; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o" style="margin-left:5px;"></i></button>
+
+                                </td>
+                            </tr>
+
+                            counter++;
+                        }
+                      
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- END DEFAULT DATATABLE  -->
+                    </div>
+
+                </div>
+
+
+
+                <!-- Button to open the popup -->
+                <div class="row">
+                    <div class="col-md-11 text-right">
+                        <!-- Align to the right -->
+                        <button class="btn btn-primary" onclick="openPopup()" style="color:#FFFFFF; height:30px;width: 99px;">
+                            <i class="fa fa-files-o" aria-hidden="true"></i>REPORT
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Popup window content -->
+                <div id="popup" class="container">
+                    <button class="close" onclick="closePopup()">&times;</button>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="fromDate">From Date:</label>
+                            <input type="Date" class="form-control" id="fromDate">
+                        </div>
+
+                        <div class="form-group  col-md-3">
+                            <label for="ToDate">To Date:</label>
+                            <input type="date" class="form-control" id="toDate">
+                        </div>
+
+                        <div class="form-check col-md-2">
+                            <div style="margin-top:30px;">
+                                <input type="checkbox" class="form-check-input" id="showDayShift">
+                                <label class="form-check-label" for="showDayShift" style="margin-left: 30px;">Show Day Shift</label>
+                            </div>
+                        </div>
+
+                        <div class="form-check col-md-2">
+                            <div style="margin-top: 30px;">
+                                <input type="checkbox" class="form-check-input" id="showNightShift">
+                                <label class="form-check-label" for="showNightShift" style="margin-left: 30px; ">Show Night Shift</label>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-info" onclick="applyDateRange()" style="margin-top: 18px;">Apply Date Range</button>
+                        </div>
+
+                    </div>
+
+                    <h2>Data Table</h2>
+    <table id="dataTable" class="table table-bordered">
+        <thead>
+
+            <tr>
+                <th>No</th>
+                <th>Inches</th>
+                <th>Product</th>
+                <th>Shift</th>
+                <th>Prodction</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var counter2 = 1;
+            }
+            @foreach (var data in Model)
+            {
+                <tr>
+                    <td>@counter2</td>
+                    <td>@data.Inches</td>
+                    <td>@data.ProductName</td>
+                    <td>@data.Shift</td>
+                    <td>@data.Production</td>
+                    <td>@data.Date.ToShortDateString()</td>
+                    <td>
+                        <button style="background-color:#3399ff; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit" style="margin-left:5px;"></i></button>
+                        <button style="background-color:#ff0000; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o" style="margin-left:5px;"></i></button>
+
+                    </td>
+                </tr>
+
+                counter2++;
+            }
+
+
+
+        </tbody>
+    </table> 
+
+
+
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Total Day Shift Cost:</label>
+                            <input type="text" class="form-control" id="totalDayCostInput" readonly>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label>Total Night Time Shift Cost:</label>
+                            <input type="text" class="form-control" id="totalNightCostInput" readonly>
+                        </div>
+
+                        <div class="col-md-3">
+                            <button class="btn btn-success" onclick="calculateTotalCost()" style="
+                             margin-top: 22px;">
+                                Calculate
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+   <script>
+
+
+    // Trigger animation on page load
+    window.onload = function () {
+        var alertElement = document.getElementById('customAlert');
+        alertElement.classList.add('show');
+
+        // Hide the alert after a delay
+        setTimeout(function () {
+            alertElement.classList.remove('show');
+        }, 3000); // Adjust the delay (in milliseconds) as needed
+    };
+
+
+
+
+
+
+
+    // Function to open the popup
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+    }
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+
+
+    // Function to apply date range
+    // Function to apply date range
+    function applyDateRange() {
+        var fromDate = document.getElementById("fromDate").value;
+        var toDate = document.getElementById("toDate").value;
+        var showDayShift = document.getElementById("showDayShift").checked;
+        var showNightShift = document.getElementById("showNightShift").checked;
+
+        // Destroy existing DataTable instance (if any)
+        var table = $('#dataTable').DataTable();
+        table.destroy();
+
+        // Hide all rows initially
+        var tableRows = document.querySelectorAll("#popup table tbody tr");
+        tableRows.forEach(function (row) {
+            row.style.display = "none";
+        });
+
+        // Show rows that fall within the selected date range and shift options
+        tableRows.forEach(function (row) {
+            var date = row.cells[5].textContent; // Assuming the date is in the sixth cell
+            var shiftTime = row.cells[4].textContent.toLowerCase();
+            if ((date >= fromDate && date <= toDate) &&
+                ((shiftTime === 'day' && showDayShift) || (shiftTime === 'night' && showNightShift))) {
+                row.style.display = "";
+            }
+        });
+
+        // Reinitialize DataTable
+        $('#dataTable').DataTable();
+
+        // Show the table and calculation inputs
+        document.getElementById("dataTableWrapper").style.display = "block";
+        document.querySelector(".form-group-total").style.display = "block";
+    }
+
+
+
+      // Function to calculate total production
+    function calculateTotalProduction() {
+        var totalDayProduction = 0;
+        var totalNightProduction = 0;
+        // Iterate through visible table rows
+        var visibleRows = document.querySelectorAll("#popup table tbody tr[style='']");
+        visibleRows.forEach(function (row) {
+            var shiftTime = row.cells[3].textContent; // Assuming the shift column is in the fourth cell
+            var production = parseInt(row.cells[4].textContent); // Assuming the production column is in the fifth cell
+            // Check shift time and add to the corresponding total
+            if (shiftTime.toLowerCase() === 'day') {
+                totalDayProduction += production;
+            } else if (shiftTime.toLowerCase() === 'night') {
+                totalNightProduction += production;
+            }
+        });
+        // Display the totals in the input fields
+        document.getElementById("totalDayCostInput").value = totalDayProduction;
+        document.getElementById("totalNightCostInput").value = totalNightProduction;
+    }
+
+
+
+
+
+
+
+
+
+    document.getElementById('submitBtn').addEventListener('click', function () {
+        // Reset previous error messages
+        resetErrorMessages();
+
+        // Validate form fields
+        if (!validateField('Inches')) {
+            displayErrorMessage('inchesError', 'Please select Inches');
+        }
+
+        if (!validateField('Shift')) {
+            displayErrorMessage('shiftError', 'Please select Shift');
+        }
+
+        if (!validateField('ProductName')) {
+            displayErrorMessage('productNameError', 'Please enter Product Name');
+        }
+
+        if (!validateField('Production')) {
+            displayErrorMessage('productionError', 'Please enter Production');
+        }
+
+        if (!validateField('Date')) {
+            displayErrorMessage('dateError', 'Please enter Date');
+        }
+
+        // If all validations pass, submit the form
+        if (isFormValid()) {
+            document.getElementById('myForm').submit();
+        }
+    });
+
+    function validateField(fieldName) {
+        // Add validation logic for each field
+        var fieldValue = document.getElementsByName(fieldName)[0].value;
+        return fieldValue.trim() !== '';
+    }
+
+    function displayErrorMessage(errorId, message) {
+        // Display error message with red color
+        document.getElementById(errorId).innerText = message;
+    }
+
+    function resetErrorMessages() {
+        // Reset all error messages
+        var errorElements = document.querySelectorAll('.error-message');
+        errorElements.forEach(function (element) {
+            element.innerText = '';
+        });
+    }
+
+    function isFormValid() {
+        // Check if all error messages are empty
+        var errorElements = document.querySelectorAll('.error-message');
+        return Array.from(errorElements).every(function (element) {
+            return element.innerText === '';
+        });
+    }
+
+
+   </script>
+ 
+    
+
+
+
+

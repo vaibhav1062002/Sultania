@@ -1,0 +1,718 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/DashboardComan.cshtml";
+}
+
+@model List<DailyProductionEntity>
+
+
+
+<!-- <h2 style="margin-top: 20px;">DAILY PRODUCTION REPORT</h2> -->
+<h5 class="panel-title" style="color:#FFFFFF; background-color:#009991; width:100%; font-size:14px; margin-top:2px; padding: 6px;" align="center"> &nbsp; DAILY PRODUCTION REPORT</h5>
+@if (TempData["InsertRotogravure"] != null)
+{
+    <div class="custom-alert" id="customAlert">
+        Data Added Successfully..!
+    </div>
+}
+
+<div>
+
+<form method="post" action="/dailyProduction/InsertDailyProduction">
+
+<div class="row">
+
+
+
+    <div class="col-md-12" style="margin-top: 2vh;">
+        <h2 style="margin-left: 29px;">Manual Printing</h2>
+
+
+        <div class="col-md-1" style="margin-left: 2vh;">
+            <label>Day/Night<font color="#FF0000">*</font></label>
+                <select class="form-control select" name="ManualDayNight" data-live-search="true">
+                <option>Day</option>
+                <option>Night </option>
+            </select>
+        </div>
+
+        <!-- HEMMING PRODUCTION -->
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">No OF Bags<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="ManualNoOfBags" placeholder="" />
+        </div>
+
+        <!-- MANUAL PRINTING -->
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Po Red<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="ManualPoRed" placeholder="" />
+        </div>
+
+        <!-- PO RED -->
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Green<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="ManualGreen" placeholder="" />
+        </div>
+
+        <!-- GREEN -->
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Reducer Cons<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="ManualRducerCons" placeholder="" />
+        </div>
+
+        <!-- total -->
+        <div class="col-md-1" style="margin-top: 5px;text-align: center;margin-top: 25px;">
+            <h4>Total</h4>
+            <!-- <label class="control-label">Total<font color="#FF0000">*</font></label> -->
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">No OF Bags<font color="#FF0000"></font></label>
+                <input type="text" class="form-control" name="ManualNoOfBagsTotal" placeholder="Total" readonly />
+        </div>
+
+        <!-- MANUAL PRINTING -->
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Po Red<font color="#FF0000"></font></label>
+                <input type="text" class="form-control" name="ManualPoRedTotal" placeholder="Total" readonly />
+        </div>
+
+        <!-- PO RED -->
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Green<font color="#FF0000"></font></label>
+                <input type="text" class="form-control" name="ManualGreenTotal" placeholder="Total" readonly />
+        </div>
+
+        <!-- GREEN -->
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Reducer Cons<font color="#FF0000"></font></label>
+                <input type="text" class="form-control" name="ManualRducerCons" placeholder="Total" readonly />
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<hr style="border: 1px solid #000000bf;
+opacity: 0.2;">
+
+<div class="row">
+
+    <!---------------------------------- BCS Printig  -------------------------------------------->
+    <div class="col-md-12" style="margin-top: 2vh;">
+        <h2 style="margin-left: 29px;">BCS Printing</h2>
+
+
+        <div class="col-md-1" style="margin-left: 2vh;">
+            <label>Day/Night<font color="#FF0000">*</font></label>
+            <select class="form-control select" name="BCSDayNight" data-live-search="true">
+                <option>Day</option>
+                <option>Night </option>
+            </select>
+        </div>
+
+
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">BCS 1<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="Bcs1" placeholder="" />
+        </div>
+
+        <!-- GREEN -->
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">BCS 2<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="Bcs2" placeholder="" />
+        </div>
+
+        <!-- total -->
+        <div class="col-md-1" style="margin-top: 5px;text-align: center;margin-top: 25px;">
+            <h4>Total</h4>
+            <!-- <label class="control-label">Total<font color="#FF0000">*</font></label> -->
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">BCS 1<font color="#FF0000"></font></label>
+            <input type="text" class="form-control" name="Bcs1Total" placeholder="Total" readonly />
+        </div>
+
+        <!-- MANUAL PRINTING -->
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">BCS 2<font color="#FF0000"></font></label>
+                <input type="text" class="form-control" name="Bcs2Total" placeholder="Total" readonly />
+        </div>
+    </div>
+</div>
+
+
+<hr style="border: 1px solid #000000bf;
+opacity: 0.2;">
+
+<div class="row">
+
+    <!---------------------------------- Flexo Printig  -------------------------------------------->
+    <div class="col-md-12" style="margin-top: 2vh;">
+        <h2 style="margin-left: 29px;">Flexo Printing</h2>
+
+
+        <div class="col-md-1" style="margin-left: 2vh;">
+            <label>Day/Night<font color="#FF0000">*</font></label>
+            <select class="form-control select" name="FlexoDayNight" data-live-search="true">
+                <option>Day</option>
+                <option>Night </option>
+            </select>
+        </div>
+
+
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Meter<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="FlexoMeter" placeholder="" />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">INK Cons Red<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="FlexoInkConsRed" placeholder="" />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">INK Cons Black<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="FlexoInkConsBlack" placeholder="" />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Reducer Black<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control" name="FlexoReducerCons" placeholder="" />
+        </div>
+
+
+        <!-- total -->
+        <div class="col-md-1" style="margin-top: 5px;text-align: center;margin-top: 25px;">
+            <h4>Total</h4>
+            <!-- <label class="control-label">Total<font color="#FF0000">*</font></label> -->
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Meter<font color="#FF0000"></font></label>
+                <input type="text" class="form-control" name="FlexoBCSMeterTotal" placeholder="Total" readonly />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">INK Cons Red<font color="#FF0000"></font></label>
+                <input type="text" class="form-control" name="FlexoInkConsRedTotal" placeholder="Total" readonly />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">INK Cons Black<font color="#FF0000"></font></label>
+                <input type="text" class="form-control" name="FlexoInkConsBlackTotal" placeholder="Total" readonly />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Reducer Black<font color="#FF0000"></font></label>
+                <input type="text" class="form-control" name="FlexoReducerConsTotal" placeholder="Total" readonly />
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+<hr style="border: 1px solid #000000bf;
+opacity: 0.2;">
+
+<h3 style="margin-left: 20px; color:#145566; margin-left: 32%; font-weight: bold;"> WASTAGE</h3>
+<div class="row">
+
+    <div class="col-md-12" style="margin-top: 2vh;  margin-left: 18px;">
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3 style="color:#ee2222; font-weight: bold; margin-left: 17%;">Loom Wastage</h3>
+            </div>
+
+            <div class="col-md-6">
+                <h3 style=" color:orange; font-weight: bold; ">Plant Wastage</h3>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Shift A<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="LoomWastageShiftA" placeholder="" />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Shift B<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="LoomWastageShiftB" placeholder="" />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Total<font color="#FF0000"></font></label>
+            <input type="text" class="form-control" name="LoomWastageTotal" placeholder="" readonly />
+        </div>
+
+        <div class="col-md-2" style="margin-top: 5px;">
+            <!-- <label class="control-label">Act Consuption<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="ActConsuption" placeholder="" /> -->
+        </div>
+
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Shift A<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="PlantWastageShiftA" placeholder="" />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Shift B<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="PlantWastageShiftB" placeholder="" />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Total<font color="#FF0000"></font></label>
+            <input type="text" class="form-control" name="PlantWastageTotal" placeholder="" readonly />
+        </div>
+
+    </div>
+</div>
+
+
+
+<hr style="border: 1px solid #000000bf;
+opacity: 0.2;">
+
+<div class="row">
+
+    <!-- -------------------------------- Bobbine Cutting -------------------------------------------->
+    <div class="col-md-12" style="margin-top: 2vh;">
+
+        <h2 style="margin-left: 29px;">Bobbine Cutting</h2>
+
+
+        <div class="col-md-1" style="margin-left: 2vh;">
+            <label>Shift<font color="#FF0000">*</font></label>
+            <select class="form-control select" name="FlexoDayNight" data-live-search="true">
+                <option>Day</option>
+                <option>Night </option>
+            </select>
+        </div>
+
+
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">White<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="BobbineWhite" placeholder="" />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Yellow<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="Bobbineyellow" placeholder="" />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Brown<font color="#FF0000">*</font></label>
+            <input type="text" class="form-control" name="BobbineBrown" placeholder="" />
+        </div>
+
+
+
+        <!-- total -->
+        <div class="col-md-1" style="margin-top: 5px;text-align: center;margin-top: 25px;">
+            <h4>Total</h4>
+            <!-- <label class="control-label">Total<font color="#FF0000">*</font></label> -->
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">White<font color="#FF0000"></font></label>
+            <input type="text" class="form-control" name="BobbineWhiteTotal" placeholder="Total" readonly />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Yellow<font color="#FF0000"></font></label>
+            <input type="text" class="form-control" name="BobbineYellowTotal" placeholder="Total" readonly />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Brown<font color="#FF0000"></font></label>
+            <input type="text" class="form-control" name="BobbineBrownTotal" placeholder="Total" readonly />
+        </div>
+    </div>
+</div>
+
+
+
+<hr style="border: 1px solid #000000bf;
+opacity: 0.2;">
+
+<div class="row">
+
+    <!-- -------------------------------- total-------------------------------------------->
+    <div class="col-md-12" style="margin-top: 2vh; margin-left: 18px; margin-bottom: 2%;">
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label"><b>Quntity Wastage</b><font color="#FF0000"></font></label>
+            <input type="text" class="form-control" name="QuntityWastage" placeholder="Total" readonly />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label"><b>Calcium Dusting</b><font color="#FF0000"></font></label>
+            <input type="text" class="form-control" name="CalciumDusting" placeholder="Total" readonly />
+        </div>
+
+        <div class="col-md-2" style="margin-top: 5px;">
+            <label class="control-label">Lamination Wastage<font color="#FF0000"></font></label>
+            <input type="text" class="form-control" name="LaminationWastage" placeholder="Total" readonly />
+        </div>
+
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Slitting Wastage<font color="#FF0000"></font></label>
+            <input type="text" class="form-control" name="SlittingWastage" placeholder="Total" readonly />
+        </div>
+
+        <div class="col-md-1" style="margin-top: 5px;">
+            <label class="control-label">Total Wastage<font color="#FF0000"></font></label>
+            <input type="text" class="form-control" name="Total Wastage" placeholder="Total" readonly />
+        </div>
+
+
+        <div class="col-md-3" style="font-weight: bold;">
+            <button id="on" type="submit" class="btn mjks"
+                    style="color:#FFFFFF;height:30px;margin-top: 17px;width: 99px;">
+                <i class="fa fa-floppy-o" aria-hidden="true"></i>SUBMIT
+            </button>
+        </div>
+
+           </div>
+    </div>
+    </form>
+
+</div>
+
+
+    
+
+
+
+<!-- Button to open the popup -->
+@* <div class="row">
+    <div class="col-md-11 text-right">
+        <!-- Align to the right -->
+        <button class="btn btn-primary" onclick="openPopup()" style="color:#FFFFFF; height:30px;width: 99px;">
+            <i class="fa fa-files-o" aria-hidden="true"></i>REPORT
+        </button>
+    </div>
+</div>
+ *@
+
+<!-- Popup window content -->
+@* <div id="popup" class="container">
+    <button class="close" onclick="closePopup()">&times;</button>
+    <div class="row">
+        <div class="form-group col-md-3">
+            <label for="fromDate">From Date:</label>
+            <input type="Date" class="form-control" id="fromDate">
+        </div>
+
+        <div class="form-group  col-md-3">
+            <label for="ToDate">To Date:</label>
+            <input type="date" class="form-control" id="toDate">
+        </div>
+
+        <div class="form-check col-md-2">
+            <div style="margin-top:30px;">
+                <input type="checkbox" class="form-check-input" id="showDayShift">
+                <label class="form-check-label" for="showDayShift" style="margin-left: 30px;">Show Day Shift</label>
+            </div>
+        </div>
+
+        <div class="form-check col-md-2">
+            <div style="margin-top: 30px;">
+                <input type="checkbox" class="form-check-input" id="showNightShift">
+                <label class="form-check-label" for="showNightShift" style="margin-left: 30px; ">Show Night Shift</label>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <button class="btn btn-info" onclick="applyDateRange()" style="margin-top: 18px;">Apply Date Range</button>
+        </div>
+
+    </div>
+
+    <h2>Data Table</h2>
+    <div style="overflow:scroll">
+    <table id="dataTable" class="table table-bordered" style="overflow:auto !important;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>DayNight </th>
+                <th>NoOfBags </th>
+                <th>PoRed </th>
+                <th>Green </th>
+                <th>RducerCons </th>
+                <th>NoOfBagsTotal </th>
+                <th>PoRedTotal </th>
+                <th>GreenTotal </th>
+                <th>RducerConsTotal </th>
+
+                <th>BcsDayNight </th>
+                <th>Bcs1 </th>
+                <th>Bcs2 </th>
+                <th>Bcs1Total </th>
+                <th>Bcs2Total </th>
+
+                
+                <th>FlexoDayNight </th>
+                <th>FlexoMeter </th>
+                <th>FlexoInkConsRed </th>
+                <th>FlexoInkConsBlack </th>
+                <th>FlexoReducerCons </th>
+                <th>FlexoBCSMeterTotal </th>
+                <th>FlexoInkConsRedTotal </th>
+                <th>FlexoInkConsBlackTotal </th>
+                <th>FlexoReducerConsTotal </th>
+
+                <th>LoomWastageShiftA </th>
+                <th>LoomWastageShiftB </th>
+                <th>LoomWastageTotal </th>
+
+                
+                <th>PlantWastageShiftA </th>
+                <th>PlantWastageShiftB </th>
+                <th>PlantWastageTotal </th>
+
+                
+                <th>QuntityWastage </th>
+                <th>CalciumDusting </th>
+                <th>LaminationWastage </th>
+                <th>SlittingWastage </th>
+                <th>TotalWastage </th>
+                 <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Populate this part with your data using server-side scripting or JavaScript -->
+           
+                    @{
+                        var counter = 1;
+                    }
+                @foreach (var data in Model)
+                {
+                    <tr>
+                        <td>@counter</td>
+                        <td>@data.ManualDayNight</td>
+                        <td>@data.ManualNoOfBags</td>
+                        <td>@data.ManualPoRed</td>
+                        <td>@data.ManualGreen</td>
+                        <td>@data.ManualRducerCons</td>
+                        <td>@data.ManualNoOfBagsTotal</td>
+                        <td>@data.ManualPoRedTotal</td>
+                        <td>@data.ManualGreenTotal</td>
+                        <td>@data.ManualRducerConsTotal</td>
+
+                        <!-- BCS Printing Section -->
+                        <td>@data.BcsDayNight</td>
+                        <td>@data.Bcs1</td>
+                        <td>@data.Bcs2</td>
+                        <td>@data.Bcs1Total</td>
+                        <td>@data.Bcs2Total</td>
+
+                        <!-- Flexo Printing Section -->
+                        <td>@data.FlexoDayNight</td>
+                        <td>@data.FlexoMeter</td>
+                        <td>@data.FlexoInkConsRed</td>
+                        <td>@data.FlexoInkConsBlack</td>
+                        <td>@data.FlexoReducerCons</td>
+                        <td>@data.FlexoBCSMeterTotal</td>
+                        <td>@data.FlexoInkConsRedTotal</td>
+                        <td>@data.FlexoInkConsBlackTotal</td>
+                        <td>@data.FlexoReducerConsTotal</td>
+
+                        <!-- Loom Wastage Section -->
+                        <td>@data.LoomWastageShiftA</td>
+                        <td>@data.LoomWastageShiftB</td>
+                        <td>@data.LoomWastageTotal</td>
+
+                        <!-- Plant Wastage Section -->
+                        <td>@data.PlantWastageShiftA</td>
+                        <td>@data.PlantWastageShiftB</td>
+                        <td>@data.PlantWastageTotal</td>
+
+                        <!-- Total Wastage Section -->
+                        <td>@data.QuntityWastage</td>
+                        <td>@data.CalciumDusting</td>
+                        <td>@data.LaminationWastage</td>
+                        <td>@data.SlittingWastage</td>
+                        <td>@data.TotalWastage</td>
+
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+
+                    counter++;
+                }
+
+                
+
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+    <!-- Labels and input for total day shift cost and total night time shift cost -->
+    </div>
+    <div class="row">
+        <div class="form-group col-md-3">
+            <label>Total Day Shift Cost:</label>
+            <input type="text" class="form-control" id="totalDayCostInput" readonly>
+        </div>
+
+        <div class="form-group col-md-3">
+            <label>Total Night Time Shift Cost:</label>
+            <input type="text" class="form-control" id="totalNightCostInput" readonly>
+        </div>
+
+        <div class="col-md-3">
+            <button class="btn btn-success" onclick="calculateTotalCost()" style="
+      margin-top: 22px;">
+                Calculate
+            </button>
+        </div>
+
+    </div>
+
+</div> *@
+
+    
+
+
+<script>
+
+
+    // Function to open the popup
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+    }
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+    // Function to apply date range
+    function applyDateRange() {
+        var fromDate = document.getElementById("fromDate").value;
+        var toDate = document.getElementById("toDate").value;
+        var showDayShift = document.getElementById("showDayShift").checked;
+        var showNightShift = document.getElementById("showNightShift").checked;
+        // Destroy existing DataTable instance (if any)
+        $('#dataTable').DataTable().destroy();
+        // Hide all rows initially
+        var tableRows = document.querySelectorAll("#popup table tbody tr");
+        tableRows.forEach(function (row) {
+            row.style.display = "none";
+        });
+        // Show rows that fall within the selected date range and shift options
+        tableRows.forEach(function (row) {
+            var date = row.cells[3].textContent; // Assuming the date is in the fourth cell
+            var shiftTime = row.cells[2].textContent.toLowerCase();
+            if ((date >= fromDate && date <= toDate) &&
+                ((shiftTime === 'day' && showDayShift) || (shiftTime === 'night' && showNightShift))) {
+                row.style.display = "";
+            }
+        });
+        // Reinitialize DataTable
+        $('#dataTable').DataTable();
+        // Show the table and calculation inputs
+        document.getElementById("dataTableWrapper").style.display = "block";
+        document.querySelector(".form-group-total").style.display = "block";
+    }
+    // Function to calculate total cost
+    function calculateTotalCost() {
+        var totalDayCost = 0;
+        var totalNightCost = 0;
+        // Iterate through visible table rows
+        var visibleRows = document.querySelectorAll("#popup table tbody tr[style='']");
+        visibleRows.forEach(function (row) {
+            var shiftTime = row.cells[2].textContent;
+            var amount = parseFloat(row.cells[4].textContent);
+            // Check shift time and add to the corresponding total
+            if (shiftTime.toLowerCase() === 'day') {
+                totalDayCost += amount;
+            } else if (shiftTime.toLowerCase() === 'night') {
+                totalNightCost += amount;
+            }
+        });
+        // Display the totals in the input fields
+        document.getElementById("totalDayCostInput").value = totalDayCost;
+        document.getElementById("totalNightCostInput").value = totalNightCost;
+    }
+
+
+
+    document.getElementById('submitBtn').addEventListener('click', function () {
+        // Reset previous error messages
+        resetErrorMessages();
+
+        // Validate form fields
+        if (!validateField('Inches')) {
+            displayErrorMessage('inchesError', 'Please select Inches');
+        }
+
+        if (!validateField('Shift')) {
+            displayErrorMessage('shiftError', 'Please select Shift');
+        }
+
+        if (!validateField('ProductName')) {
+            displayErrorMessage('productNameError', 'Please enter Product Name');
+        }
+
+        if (!validateField('Production')) {
+            displayErrorMessage('productionError', 'Please enter Production');
+        }
+
+        if (!validateField('Date')) {
+            displayErrorMessage('dateError', 'Please enter Date');
+        }
+
+        // If all validations pass, submit the form
+        if (isFormValid()) {
+            document.getElementById('myForm').submit();
+        }
+    });
+
+    function validateField(fieldName) {
+        // Add validation logic for each field
+        var fieldValue = document.getElementsByName(fieldName)[0].value;
+        return fieldValue.trim() !== '';
+    }
+
+    function displayErrorMessage(errorId, message) {
+        // Display error message with red color
+        document.getElementById(errorId).innerText = message;
+    }
+
+    function resetErrorMessages() {
+        // Reset all error messages
+        var errorElements = document.querySelectorAll('.error-message');
+        errorElements.forEach(function (element) {
+            element.innerText = '';
+        });
+    }
+
+    function isFormValid() {
+        // Check if all error messages are empty
+        var errorElements = document.querySelectorAll('.error-message');
+        return Array.from(errorElements).every(function (element) {
+            return element.innerText === '';
+        });
+    }
+
+
+</script>

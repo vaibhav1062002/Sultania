@@ -1,0 +1,450 @@
+﻿@model List<VendorEntity>
+
+@{
+    Layout = "~/Views/Shared/demo.cshtml";
+}
+
+
+
+
+<style>
+    .modal {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
+
+    .modal-content {
+        max-width: 80%; /* Adjust the width as needed */
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        position: relative;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .custom-alert {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @@keyframes slideIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @@keyframes slideOut {
+        from {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        to {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+    }
+</style>
+
+
+
+<div class="col-md-3" style="margin-top:15px;">
+    @if (TempData["Vendor"] != null)
+    {
+        <div class="custom-alert" id="customAlert">
+            Data Added Successfully..!
+        </div>
+    }
+</div>
+
+
+<!-- <h2 style="margin-top: 20px;color:#145566; font-weight: bold; margin-left: 20px;">BAG TO BAG FLEXO PRINTING PROGRAMME AND PRODUCTION  REPORT</h2> -->
+<h5 class="panel-title" style="color:#FFFFFF; background-color:#009991; width:100%; font-size:14px;  padding: 6px;" align="center"> &nbsp; Add Party</h5>
+
+
+<div class="row">
+
+    <div class="col-md-12" style="margin-top: 2vh;">
+
+
+        <form action="/Masters/InsertVendor" method="post" enctype="multipart/form-data" onsubmit="return submitValidation()">
+
+            <div class="col-md-2" style="margin-bottom:5px;">
+                <label class="control-label">Party Name<font color="#FF0000">*</font></label>
+                <input type="text" class="form-control capitalize-input" id="Name" name="Name" placeholder="" />
+                <span class="text-danger NameDanger"><!-- Validation message here --></span>
+            </div>
+
+            <div class="col-md-1" style="margin-bottom:5px;">
+                <label class="control-label">Mobile Number<font color="#FF0000">*</font></label>
+                <input type="text" name="MobileNumber" class="form-control capitalize-input" />
+                <span class="text-danger MobileNumberDanger"><!-- Validation message here --></span>
+            </div>
+
+            <div class="col-md-2" style="margin-bottom:5px;">
+                <label class="control-label">Email<font color="#FF0000">*</font></label>
+                <input type="email" name="Email" class="form-control capitalize-input" />
+                <span class="text-danger EmailDanger"><!-- Validation message here --></span>
+            </div>
+
+            <div class="col-md-2" style="margin-bottom:5px;">
+                <label class="control-label">City/Address<font color="#FF0000">*</font></label>
+                <input type="text" name="Address" class="form-control capitalize-input" />
+                <span class="text-danger AddressDanger"><!-- Validation message here --></span>
+            </div>
+            @*
+            <div class="col-md-1" style="margin-top:-1px;">
+            <label>Name of Center <font color="#FF0000">*</font></label>
+            <select name="NameOfCenter" class="form-control select" data-live-search="true" vaibhav="submitValidation()">
+            <option value="" selected="selected" disabled>Nothing Selected</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Pune">Pune</option>
+            <option value="Amravati">Amravati</option>
+            </select>
+            <span class="text-danger NameOfCenterDanger"><!-- Validation message here --></span>
+            </div>  *@
+
+
+
+            <div class="col-md-1" style="margin-bottom:5px;">
+                <label class="control-label">GST Number <font color="#FF0000">*</font></label>
+                <input type="text" name="GSTNumber" class="form-control capitalize-input" style="width:130px; margin-left:-12px" />
+                <span class="text-danger GSTDanger"><!-- Validation message here --></span>
+            </div>
+
+            <div class="col-md-2" style="margin-bottom:5px;">
+                <label class="control-label">GST<font color="#FF0000">*</font></label>
+                <input style="padding:3px; width:212px;" type="file" name="GST" class="form-control " />
+                <span class="text-danger GSTFileDanger"><!-- Validation message here --></span>
+            </div>
+
+            <div class="col-md-1" style="margin-top:15px;">
+                <button id="on" type="submit" class="btn mjks" style="color:#FFFFFF; height:30px; width:auto;">
+                    <i class="fa fa-plus"></i>ADD
+                </button>
+            </div>
+
+            <div class="col-md-2"></div>
+
+        </form>
+
+
+
+    </div>
+
+</div>
+
+
+
+<hr style="border: 1px solid #000000bf;
+            opacity: 0.2;">
+
+
+<div class="row">
+
+    <div class="col-md-12" style="margin-top:15px;">
+
+
+        <div class="panel-body" style="margin-top:5px; margin-bottom:15px;">
+            <div style="overflow-x: auto;">
+                <table class="table datatable">
+                    <thead>
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Name</th>
+                            <th>Mobile Number</th>
+                            <th>Email</th>
+                            <th>City/Address</th>
+                            <th>Name of Center</th>
+                            <th>GST Number</th>
+                            <th>GST Image</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var count = 1;
+                        }
+                        @foreach (var data in Model)
+                        {
+                            <tr>
+                                <td>@count</td>
+                                <td>@data.Name</td>
+                                <td>@data.MobileNumber</td>
+                                <td>@data.Email</td>
+                                <td>@data.Address</td>
+                                <td>@data.NameOfCenter</td>
+                                <td>@data.GSTNumber</td>
+                                <td>
+                                    @if (!String.IsNullOrWhiteSpace(data.GSTImage))
+                                    {
+                                        <img src="~/@data.GSTImage" width="40px" height="40px" alt="gst" />
+                                    }
+                                    else
+                                    {
+                                        <span style="color:red" >Not Attached</span>
+                                    }
+                                </td>
+
+
+                                <td>
+                                    <button style="background-color:#3399ff; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit" style="margin-left:5px;"></i></button>
+                                    <button onclick="Delete(@data.Id)" style="background-color:#ff0000; border:none; max-height:25px; margin-top:-5px; margin-bottom:-5px;" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o" style="margin-left:5px;"></i></button>
+                                </td>
+                            </tr>
+                            count++;
+                        }
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- Add this modal to your HTML file -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <img id="modalImage" src="" alt="modal-image" style="max-width: 100%; max-height: 80vh;">
+    </div>
+</div>
+
+
+
+
+<script>
+
+
+    function submitValidation() {
+        // Reset all error messages and styles
+        var errorElements = document.querySelectorAll('.text-danger');
+        errorElements.forEach(function (element) {
+            element.innerHTML = "";
+        });
+
+
+        var isValid = true;
+
+        // Validate Name
+        var nameField = document.getElementsByName("Name")[0];
+        var nameError = document.querySelector('.NameDanger');
+        if (nameField.value.trim() === "") {
+            isValid = false;
+            nameError.innerHTML = "Name is required.";
+            nameField.style.borderColor = "red";
+            return isValid;  // Return here to display error for the current field only
+        }
+        else { nameField.style.borderColor = "green"; }
+
+        // Validate Mobile Number
+        var mobileNumberField = document.getElementsByName("MobileNumber")[0];
+        var mobileNumberError = document.querySelector('.MobileNumberDanger');
+        if (mobileNumberField.value.trim() === "") {
+            isValid = false;
+            mobileNumberError.innerHTML = "Mobile Number is required.";
+            mobileNumberField.style.borderColor = "red";
+            return isValid;
+        } else if (!/^[6789]\d{9}$/.test(mobileNumberField.value)) {
+            isValid = false;
+            mobileNumberError.innerHTML = "Invalid Indian Mobile Number.";
+            mobileNumberField.style.borderColor = "red";
+            return isValid;
+        }
+        else { mobileNumberField.style.borderColor = "green"; }
+
+        // Validate Email
+        var emailField = document.getElementsByName("Email")[0];
+        var emailError = document.querySelector('.EmailDanger');
+        if (emailField.value.trim() === "") {
+            isValid = false;
+            emailError.innerHTML = "Email is required.";
+            emailField.style.borderColor = "red";
+            return isValid;
+        } else if (!/^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/.test(emailField.value)) {
+            isValid = false;
+            emailError.innerHTML = "Invalid Email address.";
+            emailField.style.borderColor = "red";
+            return isValid;
+        }
+        else { emailField.style.borderColor = "green"; }
+
+        // Validate Address
+        var addressField = document.getElementsByName("Address")[0];
+        var addressError = document.querySelector('.AddressDanger');
+        if (addressField.value.trim() === "") {
+            isValid = false;
+            addressError.innerHTML = "Address is required.";
+            addressField.style.borderColor = "red";
+            return isValid;
+        }
+        else { addressField.style.borderColor = "green"; }
+
+        // Validate GST Number
+        var gstNumberField = document.getElementsByName("GSTNumber")[0];
+        var gstNumberError = document.querySelector('.GSTDanger');
+        if (gstNumberField.value.trim() === "") {
+            isValid = false;
+            gstNumberError.innerHTML = "GST Number is required.";
+            gstNumberField.style.borderColor = "red";
+            return isValid;
+        } else if (!/^[A-Za-z0-9]{15}$/.test(gstNumberField.value)) {
+            isValid = false;
+            gstNumberError.innerHTML = "Invalid GST Number.";
+            gstNumberField.style.borderColor = "red";
+            return isValid;
+        }
+        else { gstNumberField.style.borderColor = "green"; }
+
+        return isValid;
+    }
+
+
+
+
+
+
+    // Trigger animation on page load
+    window.onload = function () {
+        var alertElement = document.getElementById('customAlert');
+        alertElement.classList.add('show');
+
+        // Hide the alert after a delay
+        setTimeout(function () {
+            alertElement.classList.remove('show');
+        }, 3000); // Adjust the delay (in milliseconds) as needed
+    };
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var images = document.querySelectorAll('.datatable tbody tr td img');
+
+        images.forEach(function (image) {
+            image.addEventListener('click', function () {
+                var modal = document.getElementById('myModal');
+                var modalContent = document.querySelector('.modal-content');
+
+                modal.style.display = 'flex'; // Use flex display for vertical centering
+
+                // Center the modal content vertically
+                var topMargin = (window.innerHeight - modalContent.offsetHeight) / 2;
+                modalContent.style.marginTop = topMargin + 'px';
+
+                var modalImage = document.getElementById('modalImage');
+                modalImage.src = this.src;
+
+                var closeButton = document.getElementById('closeModal');
+                closeButton.addEventListener('click', function () {
+                    modal.style.display = 'none';
+                });
+
+                window.addEventListener('click', function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+
+
+
+
+
+    function capitalizeEachWord(inputs) {
+        inputs.forEach(function (input) {
+            let words = input.value.split(' ');
+            for (let i = 0; i < words.length; i++) {
+                words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+            }
+            input.value = words.join(' ');
+        });
+    }
+
+    // Apply the function to all elements with the "capitalize-input" class
+    document.addEventListener('input', function (event) {
+        if (event.target.classList.contains('capitalize-input')) {
+            capitalizeEachWord([event.target]);
+        }
+    });
+
+
+
+    // ajax for delte data
+    function Delete(value) {
+        var id = value;
+
+        var userConfirmed = confirm("Are you sure you want to delete?");
+
+        if (userConfirmed) {
+            $.ajax({
+                url: '/Masters/DeleteVendor/' + id,
+                type: 'POST',
+                success: function (data) {
+                    console.log("Delete successful");
+                    location.reload();
+                },
+                error: function (error) {
+                    console.error("Error deleting:", error);
+                    location.reload();
+                }
+            });
+        } else {
+            console.log("Deletion canceled by user");
+        }
+    }
+
+
+</script>
+
+
+
+
